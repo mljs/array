@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "description": "Functional utilities to transform and compute stats on arrays",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "npm run build-clean && lerna exec -- ../../node_modules/.bin/rollup -c ../../rollup.config.js",
+    "build-clean": "rimraf ./packages/*/lib/",
+    "eslint": "eslint packages *.js --cache",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepare": "lerna bootstrap",
+    "publish": "git pull --rebase && npm run build && npm run test-publish && lerna publish",
+    "test": "run-s build test-only eslint",
+    "test-watch": "jest --watch",
+    "test-publish": "run-s test-only eslint",
+    "test-only": "jest"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-cheminfo": "^1.8.0",
+    "eslint-plugin-no-only-tests": "^1.1.0",
+    "jest": "^20.0.3",
+    "lerna": "^2.0.0-rc.4",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
