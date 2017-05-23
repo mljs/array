@@ -8,7 +8,7 @@ describe('rescale', () => {
     });
 
     it('should throw min == max', () => {
-        expect(() => rescale([1, 1])).toThrow(/minimum and maximum input values are equal\. Cannot rescale a constant array/)
+        expect(() => rescale([1, 1])).toThrow(/minimum and maximum input values are equal\. Cannot rescale a constant array/);
     });
 
     it('should fill the provided output', () => {
