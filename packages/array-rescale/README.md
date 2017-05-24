@@ -11,11 +11,21 @@ Rescale an array into a range.
 
 ## Usage
 
-```js
-import library from 'ml-array-rescale';
+### `rescale(input[, options])`
 
-const result = library(args);
-// result is ...
+Rescales the values in the `input` so they fit between two new values.
+
+__Options:__
+
+* `min`: the new minimum value (default: 0)
+* `max`: the new maximum value (default: 1)
+* `output`: an array to use for output. You can pass `input` here to get an in-place modification.
+
+```js
+import rescale from 'ml-array-rescale';
+
+const result = rescale([0, 1, 2, 3, 4]);
+// [0, 0.25, 0.5, 0.75, 1]
 ```
 
 ## License
