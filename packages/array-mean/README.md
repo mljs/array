@@ -15,7 +15,7 @@ Get the mean value in an array.
 import mean from 'ml-array-mean';
 
 const result = mean([1, 5, 3, 2, 4]);
-// 5
+// 3
 ```
 
 ## License
