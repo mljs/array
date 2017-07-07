@@ -7,6 +7,9 @@ export default function mode(input) {
     if (!Array.isArray(input)) {
         throw new Error('input must be an array');
     }
+    if (input.length === 0) {
+        throw new Error('Array should not be empty!');
+    }
 
     /**
      * Faster way to get the mode (https://jsperf.com/mode)

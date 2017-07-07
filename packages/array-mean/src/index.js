@@ -12,7 +12,7 @@ export default function mean(input) {
     var l = input.length;
 
     if (l === 0) {
-        return undefined;
+        throw new Error('Array should not be empty!');
     }
 
     for (var i = 0; i < l; i++) {
