@@ -5,9 +5,9 @@
 
 Get the median value in an array, this median use the [Floyd-Rivest algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Rivest_algorithm).
 
-Implementation taken from [here](https://softwareengineering.stackexchange.com/questions/284767/kth-selection-routine-floyd-algorithm-489).
+Thanks to [mad-gooze](https://github.com/mad-gooze) for his median-quickselect [lib](https://github.com/mad-gooze/median-quickselect).
 
-Some benchmarks [here](https://jsperf.com/median1).
+Some benchmarks [here](https://jsperf.com/median-inplace/1).
 
 
 ## Installation
