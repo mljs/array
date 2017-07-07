@@ -7,10 +7,12 @@ export default function max(input) {
     if (!Array.isArray(input)) {
         throw new Error('input must be an array');
     }
-    var max = input[0];
     var l = input.length;
-    for (var i = 1; i < l; i++) {
-        if (input[i] > max) max = input[i];
+    if (l === 0) {
+        throw new Error('Array should not be empty!');
     }
-    return max;
+
+    return input.reduce(function (a, b) {
+        return Math.max(a, b);
+    });
 }
