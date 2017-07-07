@@ -5,7 +5,7 @@ describe('array-mean', () => {
         expect(mean([0])).toBe(0);
         expect(mean([1])).toBe(1);
         expect(mean([1, 2])).toBe(1.5);
-        expect(mean([1, 2, 1])).toBeCloseTo(4/3, 1);
+        expect(mean([1, 2, 1])).toBeCloseTo(4 / 3, 1);
         expect(mean([3, 2, 1])).toBe(2);
     });
     it('should throw on invalid value', () => {
