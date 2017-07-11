@@ -30,6 +30,7 @@ describe('rescale', () => {
         expect(rescale([0, 1, 2], {min: 0.5})).toEqual([0.5, 0.75, 1]);
         expect(rescale([0, 1, 2], {max: 0.5})).toEqual([0, 0.25, 0.5]);
         expect(rescale([0, 1, 2], {min: 50, max: 100})).toEqual([50, 75, 100]);
+        expect(rescale([-25, 0, 25, 50, 75], {min: -50, max: 0})).toEqual([-50, -37.5, -25, -12.5, 0]);
     });
 
     it('should throw on bad inputs', () => {

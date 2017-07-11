@@ -15,8 +15,10 @@ export default function rescale(input, options = {}) {
         output = new Array(input.length);
     }
 
-    const minValue = options.min === undefined ? 0 : options.min;
-    const maxValue = options.max === undefined ? 1 : options.max;
+    const {
+        min: minValue = 0,
+        max: maxValue = 1
+    } = options;
 
     if (minValue >= maxValue) {
         throw new RangeError('min option must be smaller than max option');
