@@ -8,11 +8,14 @@ export default function min(input) {
         throw new Error('input must be an array');
     }
 
-    if (input.length === 0) {
+    var l = input.length;
+    if (l === 0) {
         throw new Error('Array should not be empty!');
     }
 
-    return input.reduce(function (a, b) {
-        return Math.min(a, b);
-    });
+    var min = input[0];
+    for (var i = 1; i < l; i++) {
+        if (input[i] < min) min = input[i];
+    }
+    return min;
 }

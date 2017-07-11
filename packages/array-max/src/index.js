@@ -12,7 +12,9 @@ export default function max(input) {
         throw new Error('Array should not be empty!');
     }
 
-    return input.reduce(function (a, b) {
-        return Math.max(a, b);
-    });
+    var max = input[0];
+    for (var i = 1; i < l; i++) {
+        if (input[i] > max) max = input[i];
+    }
+    return max;
 }

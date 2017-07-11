@@ -11,11 +11,26 @@ export default function mode(input) {
         throw new Error('Array should not be empty!');
     }
 
-    /**
-     * Faster way to get the mode (https://jsperf.com/mode)
-     */
-    return input.sort((a, b) =>
-        input.filter(v => v === a).length
-        - input.filter(v => v === b).length
-    ).pop();
+    var maxValue = 0;
+    var maxCount = 0;
+    var count = 0;
+    var counts = {};
+
+    for (var i = 0; i < input.length; ++i) {
+        var element = input[i];
+        count = counts[element];
+        if (count) {
+            counts[element]++;
+            count++;
+        } else {
+            counts[element] = count = 1;
+        }
+        //count = counts[element] = counts[element] ? counts[element] + 1 : 1;
+        if (count > maxCount) {
+            maxCount = count;
+            maxValue = input[i];
+        }
+    }
+
+    return maxValue;
 }
