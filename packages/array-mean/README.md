@@ -3,7 +3,7 @@
   [![NPM version][npm-image]][npm-url]
   [![npm download][download-image]][download-url]
 
-Get the mean value in an array.
+Get the average value in an array.
 
 ## Installation
 
