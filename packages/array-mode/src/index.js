@@ -25,7 +25,7 @@ export default function mode(input) {
         } else {
             counts[element] = count = 1;
         }
-        //count = counts[element] = counts[element] ? counts[element] + 1 : 1;
+
         if (count > maxCount) {
             maxCount = count;
             maxValue = input[i];
