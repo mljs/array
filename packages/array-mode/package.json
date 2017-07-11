@@ -1,6 +1,6 @@
 {
   "name": "ml-array-mode",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get the most repeated value in an array",
   "main": "lib/index.js",
   "module": "src/index.js",

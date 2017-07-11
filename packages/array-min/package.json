@@ -1,6 +1,6 @@
 {
   "name": "ml-array-min",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the minimum value in an array",
   "main": "lib/index.js",
   "module": "src/index.js",
