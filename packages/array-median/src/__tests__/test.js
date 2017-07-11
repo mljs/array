@@ -13,7 +13,7 @@ describe('array-median', () => {
     });
 
     it('should throw on invalid value', () => {
-        expect(() => median([])).toThrow(/Array should not be empty!/);
+        expect(() => median([])).toThrow(/input must not be empty/);
         expect(() => median()).toThrow(/input must be an array/);
     });
 });

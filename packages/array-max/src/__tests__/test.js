@@ -10,6 +10,6 @@ describe('array-max', () => {
     });
     it('should throw on invalid value', () => {
         expect(() => max()).toThrow(/input must be an array/);
-        expect(() => max([])).toThrow(/Array should not be empty!/);
+        expect(() => max([])).toThrow(/input must not be empty/);
     });
 });

@@ -8,7 +8,7 @@ export default function mode(input) {
         throw new Error('input must be an array');
     }
     if (input.length === 0) {
-        throw new Error('Array should not be empty!');
+        throw new Error('input must not be empty');
     }
 
     var maxValue = 0;

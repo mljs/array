@@ -1,7 +1,7 @@
 {
   "name": "ml-array-mean",
-  "version": "1.0.0",
-  "description": "Get the mean value in an array",
+  "version": "0.0.0",
+  "description": "Get the average value in an array",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [

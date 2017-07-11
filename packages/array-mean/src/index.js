@@ -8,15 +8,13 @@ export default function mean(input) {
         throw new Error('input must be an array');
     }
 
-    var sum = 0;
-    var l = input.length;
-
-    if (l === 0) {
-        throw new Error('Array should not be empty!');
+    if (input.length === 0) {
+        throw new Error('input must not be empty');
     }
 
-    for (var i = 0; i < l; i++) {
+    var sum = 0;
+    for (var i = 0; i < input.length; i++) {
         sum += input[i];
     }
-    return sum / l;
+    return sum / input.length;
 }
