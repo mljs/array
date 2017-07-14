@@ -15,17 +15,17 @@ export default function rescale(input, options = {}) {
         output = new Array(input.length);
     }
 
+    const currentMin = min(input);
+    const currentMax = max(input);
+    
     const {
-        min: minValue = 0,
-        max: maxValue = 1
+        min: minValue = currentMin,
+        max: maxValue = currentMax
     } = options;
 
     if (minValue >= maxValue) {
         throw new RangeError('min option must be smaller than max option');
     }
-
-    const currentMin = min(input);
-    const currentMax = max(input);
 
     if (currentMin === currentMax) {
         throw new RangeError('minimum and maximum input values are equal. Cannot rescale a constant array');
