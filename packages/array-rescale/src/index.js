@@ -4,7 +4,10 @@ import min from 'ml-array-min';
 export default function rescale(input, options = {}) {
     if (!Array.isArray(input)) {
         throw new TypeError('input must be an array');
+    } else if (input.length === 0) {
+        throw new TypeError('input must not be empty');
     }
+
     let output;
     if (options.output !== undefined) {
         if (!Array.isArray(options.output)) {
@@ -15,20 +18,20 @@ export default function rescale(input, options = {}) {
         output = new Array(input.length);
     }
 
-    const {
-        min: minValue = 0,
-        max: maxValue = 1
-    } = options;
-
-    if (minValue >= maxValue) {
-        throw new RangeError('min option must be smaller than max option');
-    }
-
     const currentMin = min(input);
     const currentMax = max(input);
 
     if (currentMin === currentMax) {
         throw new RangeError('minimum and maximum input values are equal. Cannot rescale a constant array');
+    }
+
+    const {
+        min: minValue = options.autoMinMax ? currentMin : 0,
+        max: maxValue = options.autoMinMax ? currentMax : 1
+    } = options;
+
+    if (minValue >= maxValue) {
+        throw new RangeError('min option must be smaller than max option');
     }
 
     const factor = (maxValue - minValue) / (currentMax - currentMin);

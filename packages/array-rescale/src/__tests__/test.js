@@ -35,10 +35,16 @@ describe('rescale', () => {
 
     it('should throw on bad inputs', () => {
         expect(() => rescale()).toThrow(/input must be an array/);
-        expect(() => rescale([], {output: false})).toThrow(/output option must be an array if specified/);
-        expect(() => rescale([], {min: 2})).toThrow(/min option must be smaller than max option/);
-        expect(() => rescale([], {max: -1})).toThrow(/min option must be smaller than max option/);
-        expect(() => rescale([], {min: 2, max: 0})).toThrow(/min option must be smaller than max option/);
-        expect(() => rescale([], {min: 1, max: 1})).toThrow(/min option must be smaller than max option/);
+        expect(() => rescale([0, 1, 2], {output: false})).toThrow(/output option must be an array if specified/);
+        expect(() => rescale([0, 1, 2], {min: 2})).toThrow(/min option must be smaller than max option/);
+        expect(() => rescale([0, 1, 2], {max: -1})).toThrow(/min option must be smaller than max option/);
+        expect(() => rescale([0, 1, 2], {min: 2, max: 0})).toThrow(/min option must be smaller than max option/);
+        expect(() => rescale([0, 1, 2], {min: 1, max: 1})).toThrow(/min option must be smaller than max option/);
+        expect(() => rescale([], {min: 0, max: 1})).toThrow(/input must not be empty/);
+    });
+
+    it('should work with current min/max', () => {
+        expect(rescale([0, 1, 2], {min: 1, autoMinMax: true})).toEqual([1, 1.5, 2]);
+        expect(rescale([0, 1, 2], {max: 3, autoMinMax: true})).toEqual([0, 1.5, 3]);
     });
 });
