@@ -1,6 +1,6 @@
 {
   "name": "ml-array-rescale",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Rescale an array into a range",
   "main": "lib/index.js",
   "module": "src/index.js",
