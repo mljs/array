@@ -11,3 +11,5 @@ Functional utilities to transform and compute stats on arrays
 | [ml-array-mean](./packages/array-mean) | Get the average value in an array |
 | [ml-array-median](./packages/array-median) | Get the median value in an array |
 | [ml-array-mode](./packages/array-mode) | Get the first mode value in an array |
+| [ml-array-variance](./packages/array-variance) | Get the variance in an array |
+| [ml-array-standard-deviation](./packages/array-standard-deviation) | Get the standard deviation in an array |
