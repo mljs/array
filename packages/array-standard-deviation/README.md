@@ -12,10 +12,10 @@ Get the standard deviation in an array.
 ## Usage
 
 ```js
-import library from 'ml-array-standard-deviation';
+import standardDeviation from 'ml-array-standard-deviation';
 
-const result = library(args);
-// result is ...
+var data = [15, 13, 17, 14];
+var stdv = standardDeviation(data);
 ```
 
 ## License
