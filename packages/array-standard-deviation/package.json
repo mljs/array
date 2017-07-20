@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/mljs/array/issues"
   },
-  "homepage": "https://github.com/mljs/array/tree/master/packages/array-standard-deviation#readme"
+  "homepage": "https://github.com/mljs/array/tree/master/packages/array-standard-deviation#readme",
+  "dependencies": {
+    "ml-array-variance": "^0.0.0"
+  }
 }
