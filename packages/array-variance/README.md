@@ -12,10 +12,10 @@ Get the variance in an array.
 ## Usage
 
 ```js
-import library from 'ml-array-variance';
+import variance from 'ml-array-variance';
 
-const result = library(args);
-// result is ...
+var data = [15, 13, 17, 14];
+var dataVariance = variance(data);
 ```
 
 ## License
