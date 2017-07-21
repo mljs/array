@@ -16,15 +16,15 @@
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.2.0",
     "eslint-config-cheminfo": "^1.8.0",
-    "eslint-plugin-no-only-tests": "^1.1.0",
+    "eslint-plugin-no-only-tests": "^2.0.0",
     "jest": "^20.0.3",
     "jest-cli": "^20.0.4",
     "lerna": "^2.0.0-rc.4",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.41.6"
+    "rollup": "^0.45.2"
   },
   "jest": {
     "testEnvironment": "node"
