@@ -14,8 +14,11 @@ Get the histogram of values from the array.
 ```js
 import histogram from 'ml-array-histogram';
 
-const result = histogram([1, 5, 3, 2, 4]);
-// 5
+const result = histogram([0, 1, 3, 1, 1, 0, 5, 3, 2]);
+/* {
+    x: [0, 1, 2, 3, 5],
+    y: [2, 3, 1, 2, 1]
+} */
 ```
 
 ## License
