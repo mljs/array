@@ -13,3 +13,4 @@ Functional utilities to transform and compute stats on arrays
 | [ml-array-mode](./packages/array-mode) | Get the first mode value in an array |
 | [ml-array-variance](./packages/array-variance) | Get the variance in an array |
 | [ml-array-standard-deviation](./packages/array-standard-deviation) | Get the standard deviation in an array |
+| [ml-array-histogram](./packages/array-histogram) | Get the histogram of values from the array |

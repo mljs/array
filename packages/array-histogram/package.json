@@ -1,0 +1,22 @@
+{
+  "name": "ml-array-histogram",
+  "version": "0.0.0",
+  "description": "Get the histogram of values from the array",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mljs/array.git"
+  },
+  "keywords": [],
+  "author": "Miguel Asencio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mljs/array/issues"
+  },
+  "homepage": "https://github.com/mljs/array/tree/master/packages/array-histogram#readme"
+}
