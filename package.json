@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ml-array",
+  "name": "ml-array-utils",
   "main": "lib/index.js",
   "module": "src/index.js",
   "description": "Functional utilities to transform and compute stats on arrays",
