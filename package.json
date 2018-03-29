@@ -1,5 +1,8 @@
 {
   "private": true,
+  "name": "ml-array",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "description": "Functional utilities to transform and compute stats on arrays",
   "scripts": {
     "bootstrap": "lerna bootstrap",
