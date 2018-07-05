@@ -9,5 +9,5 @@ import variance from 'ml-array-variance';
  * @return {number}
  */
 export default function standardDeviation(values, options = {}) {
-    return Math.sqrt(variance(values, options));
+  return Math.sqrt(variance(values, options));
 }

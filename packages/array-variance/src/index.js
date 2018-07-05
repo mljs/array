@@ -8,21 +8,18 @@ import arrayMean from 'ml-array-mean';
  * @param {number} [options.mean = arrayMean] - precalculated mean, if any.
  * @return {number}
  */
-export default function (values, options = {}) {
-    const {
-        unbiased = true,
-        mean = arrayMean(values)
-    } = options;
-    var sqrError = 0;
+export default function variance(values, options = {}) {
+  const { unbiased = true, mean = arrayMean(values) } = options;
+  var sqrError = 0;
 
-    for (var i = 0; i < values.length; i++) {
-        var x = values[i] - mean;
-        sqrError += x * x;
-    }
+  for (var i = 0; i < values.length; i++) {
+    var x = values[i] - mean;
+    sqrError += x * x;
+  }
 
-    if (unbiased) {
-        return sqrError / (values.length - 1);
-    } else {
-        return sqrError / values.length;
-    }
+  if (unbiased) {
+    return sqrError / (values.length - 1);
+  } else {
+    return sqrError / values.length;
+  }
 }

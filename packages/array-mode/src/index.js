@@ -4,33 +4,33 @@
  * @return {number}
  */
 export default function mode(input) {
-    if (!Array.isArray(input)) {
-        throw new Error('input must be an array');
-    }
-    if (input.length === 0) {
-        throw new Error('input must not be empty');
-    }
+  if (!Array.isArray(input)) {
+    throw new Error('input must be an array');
+  }
+  if (input.length === 0) {
+    throw new Error('input must not be empty');
+  }
 
-    var maxValue = 0;
-    var maxCount = 0;
-    var count = 0;
-    var counts = {};
+  var maxValue = 0;
+  var maxCount = 0;
+  var count = 0;
+  var counts = {};
 
-    for (var i = 0; i < input.length; ++i) {
-        var element = input[i];
-        count = counts[element];
-        if (count) {
-            counts[element]++;
-            count++;
-        } else {
-            counts[element] = count = 1;
-        }
-
-        if (count > maxCount) {
-            maxCount = count;
-            maxValue = input[i];
-        }
+  for (var i = 0; i < input.length; ++i) {
+    var element = input[i];
+    count = counts[element];
+    if (count) {
+      counts[element]++;
+      count++;
+    } else {
+      counts[element] = count = 1;
     }
 
-    return maxValue;
+    if (count > maxCount) {
+      maxCount = count;
+      maxValue = input[i];
+    }
+  }
+
+  return maxValue;
 }

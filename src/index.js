@@ -5,15 +5,15 @@ import median from './packages/array-median/src';
 import mode from './packages/array-mode/src';
 import rescale from './packages/array-rescale/src';
 import sd from './packages/array-standard-deviation/src';
-import variance from './packages/array-ariance/src';
-
+import variance from './packages/array-variance/src';
 
 export default {
-    min,
-    max,
-    median,
-    mean,
-    rescale,
-    sd,
-    mode
-}
+  min,
+  max,
+  median,
+  mean,
+  rescale,
+  sd,
+  mode,
+  variance
+};
