@@ -1,6 +1,6 @@
 {
   "name": "ml-array-variance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the variance in an array",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-variance#readme",
   "dependencies": {
-    "ml-array-mean": "^1.0.1"
+    "ml-array-mean": "^1.0.2"
   }
 }
