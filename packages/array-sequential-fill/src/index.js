@@ -15,6 +15,10 @@ export default function sequentialFill(input = [], options = {}) {
     step
   } = options;
 
+  if (size && step) {
+    size = 0;
+  }
+
   if (!size) {
     if (step) {
       size = Math.floor((to - from) / step) + 1;
@@ -23,7 +27,7 @@ export default function sequentialFill(input = [], options = {}) {
     }
   }
   if (!step && size) {
-    step = (to - from - 1) / size;
+    step = (to - from) / (size - 1);
   }
 
   input.length = 0;
