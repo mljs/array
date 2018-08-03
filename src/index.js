@@ -6,6 +6,7 @@ import mode from './packages/array-mode/src';
 import rescale from './packages/array-rescale/src';
 import sd from './packages/array-standard-deviation/src';
 import variance from './packages/array-variance/src';
+import sequentialFill from './packages/array-sequential-fill/src';
 
 export default {
   min,
@@ -15,5 +16,6 @@ export default {
   rescale,
   sd,
   mode,
-  variance
+  variance,
+  sequentialFill
 };
