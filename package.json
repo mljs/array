@@ -32,5 +32,6 @@
   },
   "jest": {
     "testEnvironment": "node"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,4 +1,5 @@
 import quickSelectMedian from 'median-quickselect';
+import isArray from 'is-any-array';
 
 /**
  * Computes the median of the given values
@@ -6,12 +7,12 @@ import quickSelectMedian from 'median-quickselect';
  * @return {number}
  */
 export default function median(input) {
-  if (!Array.isArray(input)) {
-    throw new Error('input must be an array');
+  if (!isArray(input)) {
+    throw new TypeError('input must be an array');
   }
 
   if (input.length === 0) {
-    throw new Error('input must not be empty');
+    throw new TypeError('input must not be empty');
   }
 
   return quickSelectMedian(input.slice());

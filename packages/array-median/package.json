@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-median#readme",
   "dependencies": {
+    "is-any-array": "^0.0.3",
     "median-quickselect": "^1.0.1"
   }
 }
