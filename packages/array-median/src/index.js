@@ -8,11 +8,11 @@ import isArray from 'is-any-array';
  */
 export default function median(input) {
   if (!isArray(input)) {
-    throw new Error('input must be an array');
+    throw new TypeError('input must be an array');
   }
 
   if (input.length === 0) {
-    throw new Error('input must not be empty');
+    throw new TypeError('input must not be empty');
   }
 
   return quickSelectMedian(input.slice());

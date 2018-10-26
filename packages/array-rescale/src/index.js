@@ -1,8 +1,9 @@
 import max from 'ml-array-max';
 import min from 'ml-array-min';
+import isArray from 'is-any-array';
 
 export default function rescale(input, options = {}) {
-  if (!Array.isArray(input)) {
+  if (!isArray(input)) {
     throw new TypeError('input must be an array');
   } else if (input.length === 0) {
     throw new TypeError('input must not be empty');
@@ -10,7 +11,7 @@ export default function rescale(input, options = {}) {
 
   let output;
   if (options.output !== undefined) {
-    if (!Array.isArray(options.output)) {
+    if (!isArray(options.output)) {
       throw new TypeError('output option must be an array if specified');
     }
     output = options.output;
@@ -22,7 +23,9 @@ export default function rescale(input, options = {}) {
   const currentMax = max(input);
 
   if (currentMin === currentMax) {
-    throw new RangeError('minimum and maximum input values are equal. Cannot rescale a constant array');
+    throw new RangeError(
+      'minimum and maximum input values are equal. Cannot rescale a constant array'
+    );
   }
 
   const {

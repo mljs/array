@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/mljs/array/issues"
   },
-  "homepage": "https://github.com/mljs/array/tree/master/packages/array-mode#readme"
+  "homepage": "https://github.com/mljs/array/tree/master/packages/array-mode#readme",
+  "dependencies": {
+    "is-any-array": "^0.0.2"
+  }
 }

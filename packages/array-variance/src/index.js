@@ -1,4 +1,5 @@
 import arrayMean from 'ml-array-mean';
+import isArray from 'is-any-array';
 
 /**
  * Computes the variance of the given values
@@ -9,6 +10,10 @@ import arrayMean from 'ml-array-mean';
  * @return {number}
  */
 export default function variance(values, options = {}) {
+  if (!isArray(values)) {
+    throw new TypeError('input must be an array');
+  }
+
   const { unbiased = true, mean = arrayMean(values) } = options;
   var sqrError = 0;
 
