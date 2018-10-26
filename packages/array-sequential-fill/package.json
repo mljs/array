@@ -1,6 +1,6 @@
 {
   "name": "ml-array-sequential-fill",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Create an array with sequential numbers",
   "main": "lib/index.js",
   "module": "src/index.js",

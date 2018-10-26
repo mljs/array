@@ -22,10 +22,21 @@ describe('array-sequential fill', () => {
       8,
       10
     ]);
-    expect(sequentialFill([1, 2, 3], { from: 0, to: 10, step: 2 })).toEqual([
+    expect(sequentialFill([1, 2, 3, 4, 5, 6], { from: 0, to: 10 })).toEqual([
       0,
       2,
-      4
+      4,
+      6,
+      8,
+      10
+    ]);
+    expect(sequentialFill([], { from: 0, to: 10, step: 2 })).toEqual([
+      0,
+      2,
+      4,
+      6,
+      8,
+      10
     ]);
     expect(sequentialFill(undefined, { from: 0, to: 10, step: 2 })).toEqual([
       0,
@@ -34,6 +45,35 @@ describe('array-sequential fill', () => {
       6,
       8,
       10
+    ]);
+    expect(sequentialFill({ from: 0, to: 10, step: 2 })).toEqual([
+      0,
+      2,
+      4,
+      6,
+      8,
+      10
+    ]);
+    expect(sequentialFill([], { from: -1, to: 1, size: 5 })).toEqual([
+      -1,
+      -0.5,
+      0,
+      0.5,
+      1
+    ]);
+    expect(sequentialFill([], { from: 0, to: 0, size: 5 })).toEqual([
+      0,
+      0,
+      0,
+      0,
+      0
+    ]);
+    expect(sequentialFill([], { from: 1, to: -1, size: 5 })).toEqual([
+      1,
+      0.5,
+      0,
+      -0.5,
+      -1
     ]);
     expect(
       Array.from(sequentialFill(new Uint16Array(4), { from: 0, to: 3 }))

@@ -1,6 +1,6 @@
 {
   "name": "ml-array-max",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get the maximum value in an array",
   "main": "lib/index.js",
   "module": "src/index.js",
