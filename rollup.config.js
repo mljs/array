@@ -1,4 +1,3 @@
-import babelrc from 'babelrc-rollup';
 import babel from 'rollup-plugin-babel';
 
 const config = {
@@ -11,9 +10,7 @@ const config = {
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      plugins: [
-        "transform-es2015-parameters"
-      ]
+      plugins: ['transform-es2015-parameters']
     })
   ]
 };
