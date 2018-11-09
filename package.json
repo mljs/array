@@ -7,7 +7,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "npm run build-clean && lerna exec -- ../../node_modules/.bin/rollup -c ../../rollup.config.js",
-    "build-clean": "rimraf ./packages/*/lib/",
+    "build-clean": "rimraf ./packages/*/lib/ && rimraf ./packages/*/lib-esm/",
     "eslint": "eslint packages *.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "lerna bootstrap",

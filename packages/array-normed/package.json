@@ -3,9 +3,10 @@
   "version": "1.0.1",
   "description": "Get a normed array in an array",
   "main": "lib/index.js",
-  "module": "src/index.js",
+  "module": "lib-esm/index.js",
   "files": [
     "lib",
+    "lib-esm",
     "src"
   ],
   "repository": {
