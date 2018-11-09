@@ -59,4 +59,4 @@ typings/
 
 .idea
 /packages/*/lib/
-/packages/*/lib-esm/
+/packages/*/lib-es6/

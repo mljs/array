@@ -3,10 +3,10 @@
   "version": "1.2.0",
   "description": "Rescale an array into a range",
   "main": "lib/index.js",
-  "module": "lib-esm/index.js",
+  "module": "lib-es6/index.js",
   "files": [
     "lib",
-    "lib-esm",
+    "lib-es6",
     "src"
   ],
   "repository": {

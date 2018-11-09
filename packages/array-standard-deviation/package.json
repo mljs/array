@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "Get the standard deviation in an array",
   "main": "lib/index.js",
-  "module": "lib-esm/index.js",
+  "module": "lib-es6/index.js",
   "files": [
     "lib",
-    "lib-esm",
+    "lib-es6",
     "src"
   ],
   "repository": {
