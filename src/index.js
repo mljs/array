@@ -9,7 +9,7 @@ import variance from '../packages/array-variance/src';
 import sequentialFill from '../packages/array-sequential-fill/src';
 import normed from '../packages/array-normed';
 
-export default {
+export {
   min,
   max,
   median,
