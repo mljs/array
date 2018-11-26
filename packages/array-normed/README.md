@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 
-Get the average value in an array.
+Norme the vector (sum to 1)
 
 ## Installation
 
