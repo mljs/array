@@ -7,10 +7,10 @@ describe('rescale', () => {
   typedArray[2] = 3;
 
   it('should return a rescaled array', () => {
-    expect(rescale([0, 2])).toEqual([0, 1]);
-    expect(rescale([0, 1])).toEqual([0, 1]);
-    expect(rescale([0, 1, 2])).toEqual([0, 0.5, 1]);
-    expect(rescale([0, 1, 2])).toEqual([0, 0.5, 1]);
+    expect(rescale([0, 2])).toStrictEqual([0, 1]);
+    expect(rescale([0, 1])).toStrictEqual([0, 1]);
+    expect(rescale([0, 1, 2])).toStrictEqual([0, 0.5, 1]);
+    expect(rescale([0, 1, 2])).toStrictEqual([0, 0.5, 1]);
   });
 
   it('should throw min == max', () => {
@@ -23,23 +23,23 @@ describe('rescale', () => {
     const array = [0, 1, 2, 3, 4];
     const output = new Array(5);
     rescale(array, { output });
-    expect(output).toEqual([0, 0.25, 0.5, 0.75, 1]);
-    expect(array).toEqual([0, 1, 2, 3, 4]);
+    expect(output).toStrictEqual([0, 0.25, 0.5, 0.75, 1]);
+    expect(array).toStrictEqual([0, 1, 2, 3, 4]);
   });
 
   it('should work in-place', () => {
     const array = [0, 1, 2, 3, 4];
     rescale(array, { output: array });
-    expect(array).toEqual([0, 0.25, 0.5, 0.75, 1]);
+    expect(array).toStrictEqual([0, 0.25, 0.5, 0.75, 1]);
   });
 
   it('should work with custom min/max', () => {
-    expect(rescale([0, 1, 2], { min: -1, max: 1 })).toEqual([-1, 0, 1]);
-    expect(rescale(typedArray, { min: -1, max: 1 })).toEqual([-1, 0, 1]);
-    expect(rescale([0, 1, 2], { min: 0.5 })).toEqual([0.5, 0.75, 1]);
-    expect(rescale([0, 1, 2], { max: 0.5 })).toEqual([0, 0.25, 0.5]);
-    expect(rescale([0, 1, 2], { min: 50, max: 100 })).toEqual([50, 75, 100]);
-    expect(rescale([-25, 0, 25, 50, 75], { min: -50, max: 0 })).toEqual([
+    expect(rescale([0, 1, 2], { min: -1, max: 1 })).toStrictEqual([-1, 0, 1]);
+    expect(rescale(typedArray, { min: -1, max: 1 })).toStrictEqual([-1, 0, 1]);
+    expect(rescale([0, 1, 2], { min: 0.5 })).toStrictEqual([0.5, 0.75, 1]);
+    expect(rescale([0, 1, 2], { max: 0.5 })).toStrictEqual([0, 0.25, 0.5]);
+    expect(rescale([0, 1, 2], { min: 50, max: 100 })).toStrictEqual([50, 75, 100]);
+    expect(rescale([-25, 0, 25, 50, 75], { min: -50, max: 0 })).toStrictEqual([
       -50,
       -37.5,
       -25,
@@ -71,12 +71,12 @@ describe('rescale', () => {
   });
 
   it('should work with current min/max', () => {
-    expect(rescale([0, 1, 2], { min: 1, autoMinMax: true })).toEqual([
+    expect(rescale([0, 1, 2], { min: 1, autoMinMax: true })).toStrictEqual([
       1,
       1.5,
       2
     ]);
-    expect(rescale([0, 1, 2], { max: 3, autoMinMax: true })).toEqual([
+    expect(rescale([0, 1, 2], { max: 3, autoMinMax: true })).toStrictEqual([
       0,
       1.5,
       3
