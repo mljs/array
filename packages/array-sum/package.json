@@ -1,0 +1,26 @@
+{
+  "name": "ml-array-sum",
+  "version": "1.1.1",
+  "description": "Get the average value in an array",
+  "main": "lib/index.js",
+  "module": "lib-es6/index.js",
+  "files": [
+    "lib",
+    "lib-es6",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mljs/array.git"
+  },
+  "keywords": [],
+  "author": "Jefferson Hernández",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mljs/array/issues"
+  },
+  "homepage": "https://github.com/mljs/array/tree/master/packages/array-sum#readme",
+  "dependencies": {
+    "is-any-array": "^0.0.3"
+  }
+}
