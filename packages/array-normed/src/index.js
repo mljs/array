@@ -2,7 +2,7 @@
  * Computes the norm of the given values
  * @param {Array<number>} input
  * @param {object} [options={}]
- * @param {string} [algorithm='absolute']
+ * @param {string} [options.algorithm='absolute'] 
  * @return {number}
  */
 export default function norm(input, options = {}) {
