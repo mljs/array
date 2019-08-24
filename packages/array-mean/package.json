@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-mean#readme",
   "dependencies": {
-    "is-any-array": "^0.0.3",
     "ml-array-sum": "^1.1.1"
   }
 }
