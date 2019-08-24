@@ -10,7 +10,7 @@
     "build-clean": "rimraf ./packages/*/lib/ && rimraf ./packages/*/lib-es6/",
     "eslint": "eslint packages/**/*.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepare": "lerna bootstrap",
+    "prepare": "npm run bootstrap",
     "publish": "git pull --rebase && npm run build && npm run test-publish && lerna publish",
     "test": "run-s build test-only eslint",
     "test-watch": "jest --watch",
