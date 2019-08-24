@@ -5,7 +5,7 @@
   "module": "src/index.js",
   "description": "Functional utilities to transform and compute stats on arrays",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --no-ci",
     "build": "npm run build-clean && lerna exec -- rollup -c ../../rollup.config.js",
     "build-clean": "rimraf ./packages/*/lib/ && rimraf ./packages/*/lib-es6/",
     "eslint": "eslint packages/**/*.js --cache",
