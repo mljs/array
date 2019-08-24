@@ -14,9 +14,9 @@ export default function min(input) {
     throw new TypeError('input must not be empty');
   }
 
-  var min = input[0];
-  for (var i = 1; i < input.length; i++) {
-    if (input[i] < min) min = input[i];
+  let minValue = input[0];
+  for (let i = 1; i < input.length; i++) {
+    if (input[i] < minValue) minValue = input[i];
   }
-  return min;
+  return minValue;
 }

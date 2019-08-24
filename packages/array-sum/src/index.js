@@ -14,9 +14,9 @@ export default function sum(input) {
     throw new TypeError('input must not be empty');
   }
 
-  var sum = 0;
-  for (var i = 0; i < input.length; i++) {
-    sum += input[i];
+  let sumValue = 0;
+  for (let i = 0; i < input.length; i++) {
+    sumValue += input[i];
   }
-  return sum;
+  return sumValue;
 }

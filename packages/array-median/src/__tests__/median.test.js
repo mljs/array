@@ -1,7 +1,7 @@
 import median from '..';
 
 describe('array-median', () => {
-  var data = [];
+  let data = [];
   for (let i = 0; i < 1000; i++) {
     data.push(Math.random());
   }

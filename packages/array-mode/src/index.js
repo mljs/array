@@ -13,13 +13,13 @@ export default function mode(input) {
     throw new TypeError('input must not be empty');
   }
 
-  var maxValue = 0;
-  var maxCount = 0;
-  var count = 0;
-  var counts = {};
+  let maxValue = 0;
+  let maxCount = 0;
+  let count = 0;
+  let counts = {};
 
-  for (var i = 0; i < input.length; ++i) {
-    var element = input[i];
+  for (let i = 0; i < input.length; ++i) {
+    let element = input[i];
     count = counts[element];
     if (count) {
       counts[element]++;

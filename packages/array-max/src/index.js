@@ -14,9 +14,9 @@ export default function max(input) {
     throw new TypeError('input must not be empty');
   }
 
-  var max = input[0];
-  for (var i = 1; i < input.length; i++) {
-    if (input[i] > max) max = input[i];
+  let maxValue = input[0];
+  for (let i = 1; i < input.length; i++) {
+    if (input[i] > maxValue) maxValue = input[i];
   }
-  return max;
+  return maxValue;
 }

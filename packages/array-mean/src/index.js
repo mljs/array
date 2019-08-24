@@ -14,8 +14,8 @@ export default function mean(input) {
     throw new TypeError('input must not be empty');
   }
 
-  var sum = 0;
-  for (var i = 0; i < input.length; i++) {
+  let sum = 0;
+  for (let i = 0; i < input.length; i++) {
     sum += input[i];
   }
   return sum / input.length;

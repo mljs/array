@@ -41,9 +41,9 @@ export default function norm(input, options = {}) {
 }
 
 function absoluteSum(input) {
-  let sum = 0;
-  for (var i = 0; i < input.length; i++) {
-    sum += Math.abs(input[i]);
+  let sumValue = 0;
+  for (let i = 0; i < input.length; i++) {
+    sumValue += Math.abs(input[i]);
   }
-  return sum;
+  return sumValue;
 }

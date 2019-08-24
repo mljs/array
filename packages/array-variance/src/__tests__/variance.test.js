@@ -2,8 +2,8 @@ import variance from '..';
 
 describe('variance', () => {
   it('array', () => {
-    var data = [15, 13, 17, 7];
-    var v = variance(data);
+    let data = [15, 13, 17, 7];
+    let v = variance(data);
     expect(v).toBeCloseTo(18.667, 3);
     expect(variance(data, { unbiased: true })).toBe(v);
     expect(variance(data, { unbiased: false })).toBe(14);
@@ -16,7 +16,7 @@ describe('variance', () => {
     typedArray[2] = 17;
     typedArray[3] = 7;
 
-    var v = variance(typedArray);
+    let v = variance(typedArray);
     expect(v).toBeCloseTo(18.667, 3);
     expect(variance(typedArray, { unbiased: true })).toBe(v);
     expect(variance(typedArray, { unbiased: false })).toBe(14);
