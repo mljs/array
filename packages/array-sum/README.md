@@ -12,10 +12,10 @@ Get the average value in an array.
 ## Usage
 
 ```js
-import mean from 'ml-array-sum';
+import sum from 'ml-array-sum';
 
-const result = mean([1, 5, 3, 2, 4]);
-// 3
+const result = sum([1, 5, 3, 2, 4]);
+// 15
 ```
 
 ## License
