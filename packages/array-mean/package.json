@@ -1,6 +1,6 @@
 {
   "name": "ml-array-mean",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Get the average value in an array",
   "main": "lib/index.js",
   "module": "lib-es6/index.js",
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-mean#readme",
   "dependencies": {
-    "ml-array-sum": "^1.1.1"
+    "ml-array-sum": "^1.1.2"
   }
 }
