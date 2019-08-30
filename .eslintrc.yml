@@ -1,7 +1,5 @@
 root: true
 extends:
-  - eslint-config-cheminfo
-env:
-  jest: true
+  - cheminfo
 parserOptions:
   sourceType: module

@@ -45,7 +45,7 @@ export default function sequentialFill(input = [], options = {}) {
   } else {
     if (input.length !== size) {
       throw new Error(
-        'sequentialFill typed array must have the correct length'
+        'sequentialFill typed array must have the correct length',
       );
     }
     for (let i = 0; i < size; i++) {

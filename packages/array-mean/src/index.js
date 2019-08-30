@@ -1,4 +1,4 @@
-import isArray from 'is-any-array';
+import sum from 'ml-array-sum';
 
 /**
  * Computes the mean of the given values
@@ -6,17 +6,5 @@ import isArray from 'is-any-array';
  * @return {number}
  */
 export default function mean(input) {
-  if (!isArray(input)) {
-    throw new TypeError('input must be an array');
-  }
-
-  if (input.length === 0) {
-    throw new TypeError('input must not be empty');
-  }
-
-  var sum = 0;
-  for (var i = 0; i < input.length; i++) {
-    sum += input[i];
-  }
-  return sum / input.length;
+  return sum(input) / input.length;
 }

@@ -1,11 +1,11 @@
 import isArray from 'is-any-array';
 
 /**
- * Computes the minimum of the given values
+ * Computes the mean of the given values
  * @param {Array<number>} input
  * @return {number}
  */
-export default function min(input) {
+export default function sum(input) {
   if (!isArray(input)) {
     throw new TypeError('input must be an array');
   }
@@ -14,9 +14,9 @@ export default function min(input) {
     throw new TypeError('input must not be empty');
   }
 
-  let minValue = input[0];
-  for (let i = 1; i < input.length; i++) {
-    if (input[i] < minValue) minValue = input[i];
+  let sumValue = 0;
+  for (let i = 0; i < input.length; i++) {
+    sumValue += input[i];
   }
-  return minValue;
+  return sumValue;
 }

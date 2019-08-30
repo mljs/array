@@ -24,13 +24,13 @@ export default function rescale(input, options = {}) {
 
   if (currentMin === currentMax) {
     throw new RangeError(
-      'minimum and maximum input values are equal. Cannot rescale a constant array'
+      'minimum and maximum input values are equal. Cannot rescale a constant array',
     );
   }
 
   const {
     min: minValue = options.autoMinMax ? currentMin : 0,
-    max: maxValue = options.autoMinMax ? currentMax : 1
+    max: maxValue = options.autoMinMax ? currentMax : 1,
   } = options;
 
   if (minValue >= maxValue) {
@@ -38,7 +38,7 @@ export default function rescale(input, options = {}) {
   }
 
   const factor = (maxValue - minValue) / (currentMax - currentMin);
-  for (var i = 0; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {
     output[i] = (input[i] - currentMin) * factor + minValue;
   }
 

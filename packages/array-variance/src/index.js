@@ -15,10 +15,10 @@ export default function variance(values, options = {}) {
   }
 
   const { unbiased = true, mean = arrayMean(values) } = options;
-  var sqrError = 0;
+  let sqrError = 0;
 
-  for (var i = 0; i < values.length; i++) {
-    var x = values[i] - mean;
+  for (let i = 0; i < values.length; i++) {
+    let x = values[i] - mean;
     sqrError += x * x;
   }
 
