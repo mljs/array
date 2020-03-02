@@ -1,6 +1,6 @@
-import max from "ml-array-max";
-import sum from "ml-array-sum";
-import isArray from "is-any-array";
+import max from 'ml-array-max';
+import sum from 'ml-array-sum';
+import isArray from 'is-any-array';
 /**
  * Computes the norm of the given values
  * @param {Array<number>} input
@@ -9,30 +9,30 @@ import isArray from "is-any-array";
  * @return {number}
  */
 export default function norm(input, options = {}) {
-  const { algorithm = "absolute" } = options;
+  const { algorithm = 'absolute' } = options;
   if (!isArray(input)) {
-    throw new Error("input must be an array");
+    throw new Error('input must be an array');
   }
 
   if (input.length === 0) {
-    throw new Error("input must not be empty");
+    throw new Error('input must not be empty');
   }
 
   switch (algorithm.toLowerCase()) {
-    case "absolute": {
+    case 'absolute': {
       let absoluteSumValue = absoluteSum(input);
       if (absoluteSumValue === 0) return input.slice(0);
-      return input.map(element => element / absoluteSumValue);
+      return input.map((element) => element / absoluteSumValue);
     }
-    case "max": {
+    case 'max': {
       let maxValue = max(input);
       if (maxValue === 0) return input.slice(0);
-      return input.map(element => element / maxValue);
+      return input.map((element) => element / maxValue);
     }
-    case "sum": {
+    case 'sum': {
       let sumValue = sum(input);
       if (sumValue === 0) return input.slice(0);
-      return input.map(element => element / sumValue);
+      return input.map((element) => element / sumValue);
     }
 
     default:
