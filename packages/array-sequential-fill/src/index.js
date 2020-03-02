@@ -1,4 +1,4 @@
-import isArray from 'is-any-array';
+import isArray from "is-any-array";
 
 /**
  * Fill an array with sequential numbers
@@ -11,19 +11,19 @@ import isArray from 'is-any-array';
  * @return {Array<number>}
  */
 export default function sequentialFill(input = [], options = {}) {
-  if (typeof input === 'object' && !isArray(input)) {
+  if (typeof input === "object" && !isArray(input)) {
     options = input;
     input = [];
   }
 
   if (!isArray(input)) {
-    throw new TypeError('input must be an array');
+    throw new TypeError("input must be an array");
   }
 
   let { from = 0, to = 10, size = input.length, step } = options;
 
   if (size && step) {
-    throw new Error('step is defined by the array size');
+    throw new Error("step is defined by the array size");
   }
 
   if (!size) {
@@ -36,7 +36,7 @@ export default function sequentialFill(input = [], options = {}) {
   if (!step && size) {
     step = (to - from) / (size - 1);
   }
-  if (Array.isArray(input)) {
+  if (isArray(input)) {
     input.length = 0; // only works with normal array
     for (let i = 0; i < size; i++) {
       input.push(from);
@@ -45,7 +45,7 @@ export default function sequentialFill(input = [], options = {}) {
   } else {
     if (input.length !== size) {
       throw new Error(
-        'sequentialFill typed array must have the correct length',
+        "sequentialFill typed array must have the correct length"
       );
     }
     for (let i = 0; i < size; i++) {
