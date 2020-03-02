@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-variance#readme",
   "dependencies": {
-    "is-any-array": "^0.0.3"
+    "is-any-array": "0.0.3"
   }
 }
