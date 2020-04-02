@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/mljs/array/compare/ml-array-rescale@1.2.2...ml-array-rescale@1.3.0) (2020-04-02)
+
+
+### Features
+
+* add maxValue in normed max algo and improve speed ([4c01258](https://github.com/mljs/array/commit/4c012584f7ddaee221921a97b2bc142cc93b6f84))
+
+
+
+
+
 ## [1.2.2](https://github.com/mljs/array/compare/ml-array-rescale@1.2.1...ml-array-rescale@1.2.2) (2019-08-30)
 
 **Note:** Version bump only for package ml-array-rescale

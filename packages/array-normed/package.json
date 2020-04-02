@@ -1,6 +1,6 @@
 {
   "name": "ml-array-normed",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Get a normed array in an array",
   "main": "lib/index.js",
   "module": "lib-es6/index.js",
