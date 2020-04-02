@@ -1,6 +1,6 @@
+import isArray from 'is-any-array';
 import max from 'ml-array-max';
 import min from 'ml-array-min';
-import isArray from 'is-any-array';
 
 /**
  *

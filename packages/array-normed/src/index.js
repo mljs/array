@@ -1,6 +1,6 @@
+import isArray from 'is-any-array';
 import max from 'ml-array-max';
 import sum from 'ml-array-sum';
-import isArray from 'is-any-array';
 /**
  * Computes the norm of the given values
  * @param {Array<number>} input

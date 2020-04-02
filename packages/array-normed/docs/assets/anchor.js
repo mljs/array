@@ -6,8 +6,7 @@
 /* eslint-env amd, node */
 
 // https://github.com/umdjs/umd/blob/master/templates/returnExports.js
-(function(root, factory) {
-  'use strict';
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
@@ -21,8 +20,7 @@
     root.AnchorJS = factory();
     root.anchors = new root.AnchorJS();
   }
-})(this, function() {
-  'use strict';
+})(this, function () {
   function AnchorJS(options) {
     this.options = options || {};
     this.elements = [];
@@ -51,7 +49,7 @@
      * https://github.com/Modernizr/Modernizr/blob/da22eb27631fc4957f67607fe6042e85c0a84656/feature-detects/touchevents.js#L40
      * @returns {Boolean} - true if the current device supports touch.
      */
-    this.isTouchDevice = function() {
+    this.isTouchDevice = function () {
       return !!(
         'ontouchstart' in window ||
         (window.DocumentTouch && document instanceof DocumentTouch)
@@ -64,20 +62,20 @@
      *                                            to. Also accepts an array or nodeList containing the relavant elements.
      * @returns {this}                           - The AnchorJS object
      */
-    this.add = function(selector) {
-      var elements,
-        elsWithIds,
-        idList,
-        elementID,
-        i,
-        index,
-        count,
-        tidyText,
-        newTidyText,
-        readableID,
-        anchor,
-        visibleOptionToUse,
-        indexesToDrop = [];
+    this.add = function (selector) {
+      let elements;
+      let elsWithIds;
+      let idList;
+      let elementID;
+      let i;
+      let index;
+      let count;
+      let tidyText;
+      let newTidyText;
+      let readableID;
+      let anchor;
+      let visibleOptionToUse;
+      let indexesToDrop = [];
 
       // We reapply options here because somebody may have overwritten the default options object when setting options.
       // For example, this overwrites all options but visible:
@@ -128,7 +126,7 @@
           count = 0;
           do {
             if (index !== undefined) {
-              newTidyText = tidyText + '-' + count;
+              newTidyText = `${tidyText}-${count}`;
             }
 
             index = idList.indexOf(newTidyText);
@@ -146,9 +144,9 @@
         // The following code builds the following DOM structure in a more effiecient (albeit opaque) way.
         // '<a class="anchorjs-link ' + this.options.class + '" href="#' + elementID + '" aria-label="Anchor link for: ' + readableID + '" data-anchorjs-icon="' + this.options.icon + '"></a>';
         anchor = document.createElement('a');
-        anchor.className = 'anchorjs-link ' + this.options.class;
-        anchor.href = '#' + elementID;
-        anchor.setAttribute('aria-label', 'Anchor link for: ' + readableID);
+        anchor.className = `anchorjs-link ${this.options.class}`;
+        anchor.href = `#${elementID}`;
+        anchor.setAttribute('aria-label', `Anchor link for: ${readableID}`);
         anchor.setAttribute('data-anchorjs-icon', this.options.icon);
 
         if (visibleOptionToUse === 'always') {
@@ -193,12 +191,12 @@
      *                                            OR a nodeList / array containing the DOM elements.
      * @returns {this}                           - The AnchorJS object
      */
-    this.remove = function(selector) {
-      var index,
-        domAnchor,
-        elements = _getElements(selector);
+    this.remove = function (selector) {
+      let index;
+      let domAnchor;
+      let elements = _getElements(selector);
 
-      for (var i = 0; i < elements.length; i++) {
+      for (let i = 0; i < elements.length; i++) {
         domAnchor = elements[i].querySelector('.anchorjs-link');
         if (domAnchor) {
           // Drop the element from our main list, if it's in there.
@@ -216,7 +214,7 @@
     /**
      * Removes all anchorjs links. Mostly used for tests.
      */
-    this.removeAll = function() {
+    this.removeAll = function () {
       this.remove(this.elements);
     };
 
@@ -229,10 +227,10 @@
      * @param  {String} text - Any text. Usually pulled from the webpage element we are linking to.
      * @returns {String}      - hyphen-delimited text for use in IDs and URLs.
      */
-    this.urlify = function(text) {
+    this.urlify = function (text) {
       // Regex for finding the nonsafe URL characters (many need escaping): & +$,:;=?@"#{}|^~[`%!'<>]./()*\
-      var nonsafeChars = /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g,
-        urlText;
+      let nonsafeChars = /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;
+      let urlText;
 
       // The reason we include this _applyRemainingDefaultOptions is so urlify can be called independently,
       // even after setting options. This can be useful for tests or other applications.
@@ -260,13 +258,13 @@
      * @param    {HTMLElemnt}  el - a DOM node
      * @returns   {Boolean}     true/false
      */
-    this.hasAnchorJSLink = function(el) {
-      var hasLeftAnchor =
-          el.firstChild &&
-          (' ' + el.firstChild.className + ' ').indexOf(' anchorjs-link ') > -1,
-        hasRightAnchor =
-          el.lastChild &&
-          (' ' + el.lastChild.className + ' ').indexOf(' anchorjs-link ') > -1;
+    this.hasAnchorJSLink = function (el) {
+      let hasLeftAnchor =
+        el.firstChild &&
+        ` ${el.firstChild.className} `.indexOf(' anchorjs-link ') > -1;
+      let hasRightAnchor =
+        el.lastChild &&
+        ` ${el.lastChild.className} `.indexOf(' anchorjs-link ') > -1;
 
       return hasLeftAnchor || hasRightAnchor || false;
     };
@@ -279,7 +277,7 @@
      * @returns {Array} - An array containing the elements we want.
      */
     function _getElements(input) {
-      var elements;
+      let elements;
       if (typeof input === 'string' || input instanceof String) {
         // See https://davidwalsh.name/nodelist-array for the technique transforming nodeList -> Array.
         elements = [].slice.call(document.querySelectorAll(input));
@@ -302,29 +300,29 @@
         return;
       }
 
-      var style = document.createElement('style'),
-        linkRule =
-          ' .anchorjs-link {' +
-          '   opacity: 0;' +
-          '   text-decoration: none;' +
-          '   -webkit-font-smoothing: antialiased;' +
-          '   -moz-osx-font-smoothing: grayscale;' +
-          ' }',
-        hoverRule =
-          ' *:hover > .anchorjs-link,' +
-          ' .anchorjs-link:focus  {' +
-          '   opacity: 1;' +
-          ' }',
-        anchorjsLinkFontFace =
-          ' @font-face {' +
-          '   font-family: "anchorjs-icons";' + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
-          '   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype");' +
-          ' }',
-        pseudoElContent =
-          ' [data-anchorjs-icon]::after {' +
-          '   content: attr(data-anchorjs-icon);' +
-          ' }',
-        firstStyleEl;
+      let style = document.createElement('style');
+      let linkRule =
+        ' .anchorjs-link {' +
+        '   opacity: 0;' +
+        '   text-decoration: none;' +
+        '   -webkit-font-smoothing: antialiased;' +
+        '   -moz-osx-font-smoothing: grayscale;' +
+        ' }';
+      let hoverRule =
+        ' *:hover > .anchorjs-link,' +
+        ' .anchorjs-link:focus  {' +
+        '   opacity: 1;' +
+        ' }';
+      let anchorjsLinkFontFace =
+        ' @font-face {' +
+        '   font-family: "anchorjs-icons";' + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
+        '   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype");' +
+        ' }';
+      let pseudoElContent =
+        ' [data-anchorjs-icon]::after {' +
+        '   content: attr(data-anchorjs-icon);' +
+        ' }';
+      let firstStyleEl;
 
       style.className = 'anchorjs';
       style.appendChild(document.createTextNode('')); // Necessary for Webkit.

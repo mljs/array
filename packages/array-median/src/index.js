@@ -1,5 +1,5 @@
-import quickSelectMedian from 'median-quickselect';
 import isArray from 'is-any-array';
+import quickSelectMedian from 'median-quickselect';
 
 /**
  * Computes the median of the given values

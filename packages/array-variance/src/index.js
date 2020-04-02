@@ -1,5 +1,5 @@
-import arrayMean from 'ml-array-mean';
 import isArray from 'is-any-array';
+import arrayMean from 'ml-array-mean';
 
 /**
  * Computes the variance of the given values
