@@ -2,6 +2,12 @@ import max from 'ml-array-max';
 import min from 'ml-array-min';
 import isArray from 'is-any-array';
 
+/**
+ *
+ * @param {Array} input
+ * @param {object} [options={}]
+ * @param {Array} [options.output=[]] specify the output array, can be the input array for in place modification
+ */
 export default function rescale(input, options = {}) {
   if (!isArray(input)) {
     throw new TypeError('input must be an array');

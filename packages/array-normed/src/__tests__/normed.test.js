@@ -22,6 +22,22 @@ describe('array-norm', () => {
     expect(norm([1, 4], { algorithm: 'max' })).toStrictEqual([0.25, 1]);
   });
 
+  it('should return the norm algorithm=max and max to 100', () => {
+    expect(norm([0], { algorithm: 'max', maxValue: 100 })).toStrictEqual([0]);
+    expect(norm([0, 0], { algorithm: 'max', maxValue: 100 })).toStrictEqual([
+      0,
+      0,
+    ]);
+    expect(norm([-1, 1], { algorithm: 'max', maxValue: 100 })).toStrictEqual([
+      -100,
+      100,
+    ]);
+    expect(norm([1, 4], { algorithm: 'max', maxValue: 100 })).toStrictEqual([
+      25,
+      100,
+    ]);
+  });
+
   it('should return the norm algorithm=sum', () => {
     expect(norm([0], { algorithm: 'sum' })).toStrictEqual([0]);
     expect(norm([0, 0], { algorithm: 'sum' })).toStrictEqual([0, 0]);
