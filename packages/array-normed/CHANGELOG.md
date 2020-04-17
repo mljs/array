@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/mljs/array/compare/ml-array-normed@1.2.0...ml-array-normed@1.3.0) (2020-04-17)
+
+
+### Features
+
+* add sumValue in normed ([a6e60c5](https://github.com/mljs/array/commit/a6e60c5d6e399aa3f24c30485d1be0b8bb373d1e))
+
+
+
+
+
 # [1.2.0](https://github.com/mljs/array/compare/ml-array-normed@1.0.3...ml-array-normed@1.2.0) (2020-04-02)
 
 
