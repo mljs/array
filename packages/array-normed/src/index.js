@@ -12,7 +12,7 @@ import sum from 'ml-array-sum';
  * @return {number}
  */
 export default function norm(input, options = {}) {
-  const { algorithm = 'absolute', maxValue = 1, sumValue = 1 } = options;
+  const { algorithm = 'absolute', sumValue = 1, maxValue = 1 } = options;
   if (!isArray(input)) {
     throw new Error('input must be an array');
   }
