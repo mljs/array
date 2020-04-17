@@ -46,6 +46,26 @@ describe('array-norm', () => {
     expect(norm([1, 3], { algorithm: 'sum' })).toStrictEqual([0.25, 0.75]);
   });
 
+  it('should return the norm algorithm=sum sumValue=5', () => {
+    expect(norm([0], { algorithm: 'sum', sumValue: 5 })).toStrictEqual([0]);
+    expect(norm([0, 0], { algorithm: 'sum', sumValue: 5 })).toStrictEqual([
+      0,
+      0,
+    ]);
+    expect(norm([-1, 1], { algorithm: 'sum', sumValue: 5 })).toStrictEqual([
+      -1,
+      1,
+    ]);
+    expect(norm([-1, 3], { algorithm: 'sum', sumValue: 5 })).toStrictEqual([
+      -2.5,
+      7.5,
+    ]);
+    expect(norm([1, 3], { algorithm: 'sum', sumValue: 5 })).toStrictEqual([
+      1.25,
+      3.75,
+    ]);
+  });
+
   it('should throw on invalid value', () => {
     expect(() => norm()).toThrow(/input must be an array/);
     expect(() => norm([])).toThrow(/input must not be empty/);

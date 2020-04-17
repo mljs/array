@@ -7,11 +7,12 @@ import sum from 'ml-array-sum';
  * @param {object} [options={}]
  * @param {string} [options.algorithm='absolute'] absolute, sum or max
  * @param {number} [options.maxValue=1] new max value for algo max
+ * @param {number} [options.sumValue=1] new max value for algo absolute and sum
  * @param {Array} [options.output=[]] specify the output array, can be the input array for in place modification
  * @return {number}
  */
 export default function norm(input, options = {}) {
-  const { algorithm = 'absolute', maxValue = 1 } = options;
+  const { algorithm = 'absolute', maxValue = 1, sumValue = 1 } = options;
   if (!isArray(input)) {
     throw new Error('input must be an array');
   }
@@ -32,7 +33,7 @@ export default function norm(input, options = {}) {
 
   switch (algorithm.toLowerCase()) {
     case 'absolute': {
-      let absoluteSumValue = absoluteSum(input);
+      let absoluteSumValue = absoluteSum(input) / sumValue;
       if (absoluteSumValue === 0) return input.slice(0);
       for (let i = 0; i < input.length; i++) {
         output[i] = input[i] / absoluteSumValue;
@@ -49,10 +50,10 @@ export default function norm(input, options = {}) {
       return output;
     }
     case 'sum': {
-      let sumValue = sum(input);
-      if (sumValue === 0) return input.slice(0);
+      let sumFactor = sum(input) / sumValue;
+      if (sumFactor === 0) return input.slice(0);
       for (let i = 0; i < input.length; i++) {
-        output[i] = input[i] / sumValue;
+        output[i] = input[i] / sumFactor;
       }
       return output;
     }
