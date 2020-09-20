@@ -36,5 +36,7 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "dependencies": {}
+  "dependencies": {
+    "is-any-array": "^0.1.0"
+  }
 }
