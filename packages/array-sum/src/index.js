@@ -1,7 +1,7 @@
 import isArray from 'is-any-array';
 
 /**
- * Computes the mean of the given values
+ * Computes the sum of the given values
  * @param {Array<number>} input
  * @return {number}
  */
