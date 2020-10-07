@@ -15,7 +15,8 @@
     "test": "run-s build test-only eslint",
     "test-watch": "jest --watch",
     "test-publish": "run-s test-only eslint",
-    "test-only": "jest"
+    "test-only": "jest",
+    "test-coverage": "jest --coverage"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
