@@ -1,6 +1,6 @@
 {
   "name": "ml-array-standard-deviation",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Get the standard deviation in an array",
   "main": "lib/index.js",
   "module": "lib-es6/index.js",
@@ -24,6 +24,6 @@
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-standard-deviation#readme",
   "dependencies": {
     "is-any-array": "^0.1.0",
-    "ml-array-variance": "^1.1.4"
+    "ml-array-variance": "^1.1.5"
   }
 }

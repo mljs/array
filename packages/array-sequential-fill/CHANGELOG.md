@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/mljs/array/compare/ml-array-sequential-fill@1.1.2...ml-array-sequential-fill@1.1.3) (2020-10-07)
+
+
+### Bug Fixes
+
+* add is-any-array dependency ([451f438](https://github.com/mljs/array/commit/451f43807d3d290aefb6f813408438a1121ce2f7))
+* allow any array in array-normed and array-sequential-fill ([2772ea3](https://github.com/mljs/array/commit/2772ea352c3948b657eb7ae537b04d3e2c287d3d))
+
+
+
+
+
+
 ## [1.1.2](https://github.com/mljs/array/compare/ml-array-sequential-fill@1.1.1...ml-array-sequential-fill@1.1.2) (2019-08-30)
 
 **Note:** Version bump only for package ml-array-sequential-fill
