@@ -1,12 +1,5 @@
 import isArray from 'is-any-array';
 
-/**
- * Computes the maximum of the given values
- * @param {Array<number>} input
- * @param {number} [options.fromIndex] - Start index (inclusive) for the slice within which we look for the maximum
- * @param {number} [options.toIndex] - End index (exclusive) for the slice within which we look for the maximum
- * @return {number}
- */
 export default function max(input, options = {}) {
   if (!isArray(input)) {
     throw new TypeError('input must be an array');

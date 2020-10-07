@@ -4,10 +4,12 @@
   "description": "Rescale an array into a range",
   "main": "lib/index.js",
   "module": "lib-es6/index.js",
+  "types": "types.d.ts",
   "files": [
     "lib",
     "lib-es6",
-    "src"
+    "src",
+    "types.d.ts"
   ],
   "repository": {
     "type": "git",

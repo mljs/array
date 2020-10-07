@@ -2,15 +2,6 @@ import isArray from 'is-any-array';
 import max from 'ml-array-max';
 import min from 'ml-array-min';
 
-/**
- *
- * @param {Array} input
- * @param {object} [options={}]
- * @param {number} [options.min=Math.min(...input)]
- * @param {number} [options.max=Math.max(...input)]
- * @param {number} [options.autoMinMax] if min or max is undefined take the min or max from array
- * @param {Array} [options.output=[]] specify the output array, can be the input array for in place modification
- */
 export default function rescale(input, options = {}) {
   if (!isArray(input)) {
     throw new TypeError('input must be an array');

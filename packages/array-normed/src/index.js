@@ -1,16 +1,7 @@
 import isArray from 'is-any-array';
 import max from 'ml-array-max';
 import sum from 'ml-array-sum';
-/**
- * Computes the norm of the given values
- * @param {Array<number>} input
- * @param {object} [options={}]
- * @param {string} [options.algorithm='absolute'] absolute, sum or max
- * @param {number} [options.maxValue=1] new max value for algo max
- * @param {number} [options.sumValue=1] new max value for algo absolute and sum
- * @param {Array} [options.output=[]] specify the output array, can be the input array for in place modification
- * @return {number}
- */
+
 export default function norm(input, options = {}) {
   const { algorithm = 'absolute', sumValue = 1, maxValue = 1 } = options;
   if (!isArray(input)) {

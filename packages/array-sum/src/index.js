@@ -1,10 +1,5 @@
 import isArray from 'is-any-array';
 
-/**
- * Computes the sum of the given values
- * @param {Array<number>} input
- * @return {number}
- */
 export default function sum(input) {
   if (!isArray(input)) {
     throw new TypeError('input must be an array');

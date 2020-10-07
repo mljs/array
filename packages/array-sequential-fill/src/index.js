@@ -22,7 +22,7 @@ export default function sequentialFill(input = [], options = {}) {
 
   let { from = 0, to = 10, size = input.length, step } = options;
 
-  if (size && step) {
+  if (size !== 0 && step) {
     throw new Error('step is defined by the array size');
   }
 

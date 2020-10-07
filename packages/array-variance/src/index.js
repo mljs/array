@@ -1,14 +1,6 @@
 import isArray from 'is-any-array';
 import arrayMean from 'ml-array-mean';
 
-/**
- * Computes the variance of the given values
- * @param {Array} values
- * @param {object} [options]
- * @param {boolean} [options.unbiased = true] - if true, divide by (n-1); if false, divide by n.
- * @param {number} [options.mean = arrayMean] - precalculated mean, if any.
- * @return {number}
- */
 export default function variance(values, options = {}) {
   if (!isArray(values)) {
     throw new TypeError('input must be an array');

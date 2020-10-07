@@ -1,11 +1,6 @@
 import isArray from 'is-any-array';
 import quickSelectMedian from 'median-quickselect';
 
-/**
- * Computes the median of the given values
- * @param {Array<number>} input
- * @return {number}
- */
 export default function median(input) {
   if (!isArray(input)) {
     throw new TypeError('input must be an array');
