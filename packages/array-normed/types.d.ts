@@ -26,6 +26,6 @@ declare module 'ml-array-normed' {
   function arrayNormed<T extends ArrayLike<number>>(
     array: T,
     options?: ArrayNormedOptions<T>,
-  ): number;
+  ): number[];
   export = arrayNormed;
 }
