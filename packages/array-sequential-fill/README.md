@@ -1,4 +1,4 @@
-# array-variance
+# ml-array-sequential-fill
 
   [![NPM version][npm-image]][npm-url]
   [![npm download][download-image]][download-url]
