@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/mljs/array/compare/ml-array-max@1.2.0...ml-array-max@1.2.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* add missing "types" field ([27cf789](https://github.com/mljs/array/commit/27cf78928362cffa6735b42b72a3f161e3dae2aa))
+
+
+
+
+
 # [1.2.0](https://github.com/mljs/array/compare/ml-array-max@1.1.2...ml-array-max@1.2.0) (2020-10-07)
 
 
