@@ -4,6 +4,7 @@
   "description": "Get the maximum value in an array",
   "main": "lib/index.js",
   "module": "lib-es6/index.js",
+  "types": "types.d.ts",
   "files": [
     "lib",
     "lib-es6",
