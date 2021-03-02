@@ -9,15 +9,14 @@ declare namespace ArrayMax {
      */
     toIndex?: number;
   }
-
-  /**
-   * Computes the maximum of the given values.
-   */
-  function arrayMax(
-    array: ArrayLike<number>,
-    options?: ArrayMaxOptions,
-  ): number;
 }
 
-export = ArrayMax;
+/**
+ * Computes the maximum of the given values.
+ */
+declare function ArrayMax(
+  array: ArrayLike<number>,
+  options?: ArrayMax.ArrayMaxOptions,
+): number;
 
+export = ArrayMax;

@@ -19,15 +19,14 @@ declare namespace ArrayNormed {
      */
     output?: T;
   }
-
-  /**
-   * Normalize the values of the given array.
-   */
-  function arrayNormed<T extends ArrayLike<number>>(
-    array: T,
-    options?: ArrayNormedOptions<T>,
-  ): number[];
 }
 
-export = ArrayNormed;
+/**
+ * Normalize the values of the given array.
+ */
+declare function ArrayNormed<T extends ArrayLike<number>>(
+  array: T,
+  options?: ArrayNormed.ArrayNormedOptions<T>,
+): number[];
 
+export = ArrayNormed;

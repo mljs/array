@@ -9,15 +9,14 @@ declare namespace ArrayMin {
      */
     toIndex?: number;
   }
-
-  /**
-   * Computes the minimum of the given values.
-   */
-  function arrayMin(
-    array: ArrayLike<number>,
-    options?: ArrayMinOptions,
-  ): number;
 }
 
-export = ArrayMin;
+/**
+ * Computes the minimum of the given values.
+ */
+declare function ArrayMin(
+  array: ArrayLike<number>,
+  options?: ArrayMin.ArrayMinOptions,
+): number;
 
+export = ArrayMin;

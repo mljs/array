@@ -18,14 +18,14 @@ declare namespace ArrayRescale {
      */
     output?: T;
   }
-
-  /**
-   * Rescale an array into a range.
-   */
-  function arrayRescale<T extends ArrayLike<number>>(
-    array: T,
-    options?: ArrayRescaleOptions<T>,
-  ): number;
 }
+
+/**
+ * Rescale an array into a range.
+ */
+declare function ArrayRescale<T extends ArrayLike<number>>(
+  array: T,
+  options?: ArrayRescale.ArrayRescaleOptions<T>,
+): number;
 
 export = ArrayRescale;
