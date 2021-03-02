@@ -1,4 +1,4 @@
-declare module 'ml-array-normed' {
+declare module ArrayNormed {
   export interface ArrayNormedOptions<T extends ArrayLike<number>> {
     /**
      * @default 'absolute'
@@ -27,5 +27,7 @@ declare module 'ml-array-normed' {
     array: T,
     options?: ArrayNormedOptions<T>,
   ): number[];
-  export = arrayNormed;
 }
+
+export = ArrayNormed.arrayNormed;
+

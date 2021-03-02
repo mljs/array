@@ -1,4 +1,4 @@
-declare module 'ml-array-rescale' {
+declare module ArrayRescale {
   export interface ArrayRescaleOptions<T extends ArrayLike<number>> {
     /**
      * @default 0
@@ -26,5 +26,6 @@ declare module 'ml-array-rescale' {
     array: T,
     options?: ArrayRescaleOptions<T>,
   ): number;
-  export = arrayRescale;
 }
+
+export = ArrayRescale.arrayRescale;

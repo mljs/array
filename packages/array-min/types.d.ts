@@ -1,4 +1,4 @@
-declare module 'ml-array-min' {
+declare module ArrayMin {
   export interface ArrayMinOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the minimum.
@@ -17,5 +17,7 @@ declare module 'ml-array-min' {
     array: ArrayLike<number>,
     options?: ArrayMinOptions,
   ): number;
-  export = arrayMin;
 }
+
+export = ArrayMin.arrayMin;
+

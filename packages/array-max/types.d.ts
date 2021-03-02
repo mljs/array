@@ -1,4 +1,4 @@
-declare module 'ml-array-max' {
+declare module ArrayMax {
   export interface ArrayMaxOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the maximum.
@@ -17,5 +17,7 @@ declare module 'ml-array-max' {
     array: ArrayLike<number>,
     options?: ArrayMaxOptions,
   ): number;
-  export = arrayMax;
 }
+
+export = ArrayMax.arrayMax;
+
