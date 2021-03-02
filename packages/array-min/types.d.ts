@@ -1,4 +1,4 @@
-declare module ArrayMin {
+declare namespace ArrayMin {
   export interface ArrayMinOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the minimum.
@@ -19,5 +19,5 @@ declare module ArrayMin {
   ): number;
 }
 
-export = ArrayMin.arrayMin;
+export = ArrayMin;
 

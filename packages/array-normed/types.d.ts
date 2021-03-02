@@ -1,4 +1,4 @@
-declare module ArrayNormed {
+declare namespace ArrayNormed {
   export interface ArrayNormedOptions<T extends ArrayLike<number>> {
     /**
      * @default 'absolute'
@@ -29,5 +29,5 @@ declare module ArrayNormed {
   ): number[];
 }
 
-export = ArrayNormed.arrayNormed;
+export = ArrayNormed;
 

@@ -1,4 +1,4 @@
-declare module ArrayMax {
+declare namespace ArrayMax {
   export interface ArrayMaxOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the maximum.
@@ -19,5 +19,5 @@ declare module ArrayMax {
   ): number;
 }
 
-export = ArrayMax.arrayMax;
+export = ArrayMax;
 

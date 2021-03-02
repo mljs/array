@@ -1,4 +1,4 @@
-declare module ArrayRescale {
+declare namespace ArrayRescale {
   export interface ArrayRescaleOptions<T extends ArrayLike<number>> {
     /**
      * @default 0
@@ -28,4 +28,4 @@ declare module ArrayRescale {
   ): number;
 }
 
-export = ArrayRescale.arrayRescale;
+export = ArrayRescale;
