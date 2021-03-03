@@ -1,4 +1,4 @@
-declare namespace ArrayMin {
+declare namespace mlArrayMin {
   export interface ArrayMinOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the minimum.
@@ -14,9 +14,9 @@ declare namespace ArrayMin {
 /**
  * Computes the minimum of the given values.
  */
-declare function ArrayMin(
+declare function mlArrayMin(
   array: ArrayLike<number>,
-  options?: ArrayMin.ArrayMinOptions,
+  options?: mlArrayMin.ArrayMinOptions,
 ): number;
 
-export = ArrayMin;
+export = mlArrayMin;

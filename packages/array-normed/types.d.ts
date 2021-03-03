@@ -1,4 +1,4 @@
-declare namespace ArrayNormed {
+declare namespace mlArrayNormed {
   export interface ArrayNormedOptions<T extends ArrayLike<number>> {
     /**
      * @default 'absolute'
@@ -26,7 +26,7 @@ declare namespace ArrayNormed {
  */
 declare function ArrayNormed<T extends ArrayLike<number>>(
   array: T,
-  options?: ArrayNormed.ArrayNormedOptions<T>,
+  options?: mlArrayNormed.ArrayNormedOptions<T>,
 ): number[];
 
 export = ArrayNormed;
