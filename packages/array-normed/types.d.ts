@@ -24,9 +24,9 @@ declare namespace mlArrayNormed {
 /**
  * Normalize the values of the given array.
  */
-declare function ArrayNormed<T extends ArrayLike<number>>(
+declare function mlArrayNormed<T extends ArrayLike<number>>(
   array: T,
   options?: mlArrayNormed.ArrayNormedOptions<T>,
 ): number[];
 
-export = ArrayNormed;
+export = mlArrayNormed;
