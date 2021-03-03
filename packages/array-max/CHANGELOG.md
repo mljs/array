@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/mljs/array/compare/ml-array-max@1.2.1...ml-array-max@1.2.2) (2021-03-03)
+
+
+### Bug Fixes
+
+* use TS namespace instead of modules for default exports ([#16](https://github.com/mljs/array/issues/16)) ([3b5c725](https://github.com/mljs/array/commit/3b5c7258df898ec5d35af70ac51570f956e1f9a8))
+
+
+
+
+
 ## [1.2.1](https://github.com/mljs/array/compare/ml-array-max@1.2.0...ml-array-max@1.2.1) (2021-02-23)
 
 

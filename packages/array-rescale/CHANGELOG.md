@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/mljs/array/compare/ml-array-rescale@1.3.3...ml-array-rescale@1.3.4) (2021-03-03)
+
+
+### Bug Fixes
+
+* use TS namespace instead of modules for default exports ([#16](https://github.com/mljs/array/issues/16)) ([3b5c725](https://github.com/mljs/array/commit/3b5c7258df898ec5d35af70ac51570f956e1f9a8))
+
+
+
+
+
 ## [1.3.3](https://github.com/mljs/array/compare/ml-array-rescale@1.3.2...ml-array-rescale@1.3.3) (2021-02-23)
 
 **Note:** Version bump only for package ml-array-rescale
