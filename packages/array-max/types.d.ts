@@ -1,4 +1,4 @@
-declare module 'ml-array-max' {
+declare namespace mlArrayMax {
   export interface ArrayMaxOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the maximum.
@@ -9,13 +9,14 @@ declare module 'ml-array-max' {
      */
     toIndex?: number;
   }
-
-  /**
-   * Computes the maximum of the given values.
-   */
-  function arrayMax(
-    array: ArrayLike<number>,
-    options?: ArrayMaxOptions,
-  ): number;
-  export = arrayMax;
 }
+
+/**
+ * Computes the maximum of the given values.
+ */
+declare function mlArrayMax(
+  array: ArrayLike<number>,
+  options?: mlArrayMax.ArrayMaxOptions,
+): number;
+
+export = mlArrayMax;

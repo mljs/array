@@ -1,4 +1,4 @@
-declare module 'ml-array-normed' {
+declare namespace mlArrayNormed {
   export interface ArrayNormedOptions<T extends ArrayLike<number>> {
     /**
      * @default 'absolute'
@@ -19,13 +19,14 @@ declare module 'ml-array-normed' {
      */
     output?: T;
   }
-
-  /**
-   * Normalize the values of the given array.
-   */
-  function arrayNormed<T extends ArrayLike<number>>(
-    array: T,
-    options?: ArrayNormedOptions<T>,
-  ): number[];
-  export = arrayNormed;
 }
+
+/**
+ * Normalize the values of the given array.
+ */
+declare function mlArrayNormed<T extends ArrayLike<number>>(
+  array: T,
+  options?: mlArrayNormed.ArrayNormedOptions<T>,
+): number[];
+
+export = mlArrayNormed;

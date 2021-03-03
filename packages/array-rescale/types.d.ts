@@ -1,4 +1,4 @@
-declare module 'ml-array-rescale' {
+declare namespace mlArrayRescale {
   export interface ArrayRescaleOptions<T extends ArrayLike<number>> {
     /**
      * @default 0
@@ -18,13 +18,14 @@ declare module 'ml-array-rescale' {
      */
     output?: T;
   }
-
-  /**
-   * Rescale an array into a range.
-   */
-  function arrayRescale<T extends ArrayLike<number>>(
-    array: T,
-    options?: ArrayRescaleOptions<T>,
-  ): number;
-  export = arrayRescale;
 }
+
+/**
+ * Rescale an array into a range.
+ */
+declare function mlArrayRescale<T extends ArrayLike<number>>(
+  array: T,
+  options?: mlArrayRescale.ArrayRescaleOptions<T>,
+): number;
+
+export = mlArrayRescale;

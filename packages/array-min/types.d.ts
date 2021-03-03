@@ -1,4 +1,4 @@
-declare module 'ml-array-min' {
+declare namespace mlArrayMin {
   export interface ArrayMinOptions {
     /**
      * Start index (inclusive) for the slice within which we look for the minimum.
@@ -9,13 +9,14 @@ declare module 'ml-array-min' {
      */
     toIndex?: number;
   }
-
-  /**
-   * Computes the minimum of the given values.
-   */
-  function arrayMin(
-    array: ArrayLike<number>,
-    options?: ArrayMinOptions,
-  ): number;
-  export = arrayMin;
 }
+
+/**
+ * Computes the minimum of the given values.
+ */
+declare function mlArrayMin(
+  array: ArrayLike<number>,
+  options?: mlArrayMin.ArrayMinOptions,
+): number;
+
+export = mlArrayMin;
