@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/mljs/array/compare/ml-array-standard-deviation@1.1.5...ml-array-standard-deviation@1.1.6) (2021-03-24)
+
+
+### Bug Fixes
+
+* update is-any-array to v1 ([578e6d6](https://github.com/mljs/array/commit/578e6d68a429ebc72a2eaa991eec6baf377f2405))
+
+
+
+
+
 ## [1.1.5](https://github.com/mljs/array/compare/ml-array-standard-deviation@1.1.4...ml-array-standard-deviation@1.1.5) (2020-10-07)
 
 **Note:** Version bump only for package ml-array-standard-deviation

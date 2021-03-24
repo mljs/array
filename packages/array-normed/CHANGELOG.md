@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/mljs/array/compare/ml-array-normed@1.3.5...ml-array-normed@1.3.6) (2021-03-24)
+
+
+### Bug Fixes
+
+* update is-any-array to v1 ([578e6d6](https://github.com/mljs/array/commit/578e6d68a429ebc72a2eaa991eec6baf377f2405))
+
+
+
+
+
+
 ## [1.3.5](https://github.com/mljs/array/compare/ml-array-normed@1.3.4...ml-array-normed@1.3.5) (2021-03-03)
 
 
