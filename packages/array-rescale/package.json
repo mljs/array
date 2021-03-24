@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-rescale#readme",
   "dependencies": {
-    "is-any-array": "^0.1.0",
+    "is-any-array": "^1.0.0",
     "ml-array-max": "^1.2.2",
     "ml-array-min": "^1.2.1"
   }

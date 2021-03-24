@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-min#readme",
   "dependencies": {
-    "is-any-array": "^0.1.0"
+    "is-any-array": "^1.0.0"
   }
 }
