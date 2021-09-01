@@ -26,6 +26,6 @@ declare namespace mlArrayRescale {
 declare function mlArrayRescale<T extends ArrayLike<number>>(
   array: T,
   options?: mlArrayRescale.ArrayRescaleOptions<T>,
-): number;
+): number[];
 
 export = mlArrayRescale;
