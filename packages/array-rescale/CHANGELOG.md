@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.6](https://github.com/mljs/array/compare/ml-array-rescale@1.3.5...ml-array-rescale@1.3.6) (2021-09-01)
+
+
+### Bug Fixes
+
+* output type ([ee6e4d7](https://github.com/mljs/array/commit/ee6e4d70d7e5878d89c34c4208ea53273f948279))
+
+
+
+
+
 ## [1.3.5](https://github.com/mljs/array/compare/ml-array-rescale@1.3.4...ml-array-rescale@1.3.5) (2021-03-24)
 
 
