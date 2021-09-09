@@ -1,4 +1,4 @@
-declare module 'ml-array-standard-deviation' {
+declare namespace arrayStandardDeviation {
   export interface ArrayStandardDeviationOptions {
     /**
      * If true, divide by (n-1). If false, divide by n.
@@ -10,13 +10,14 @@ declare module 'ml-array-standard-deviation' {
      */
     mean?: number;
   }
-
-  /**
-   * Computes the standard deviation of the given values.
-   */
-  function arrayStandardDeviation(
-    array: ArrayLike<number>,
-    options?: ArrayStandardDeviationOptions,
-  ): number;
-  export = arrayStandardDeviation;
 }
+
+/**
+ * Computes the standard deviation of the given values.
+ */
+declare function arrayStandardDeviation(
+  array: ArrayLike<number>,
+  options?: arrayStandardDeviation.ArrayStandardDeviationOptions,
+): number;
+
+export = arrayStandardDeviation;

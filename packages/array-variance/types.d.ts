@@ -1,4 +1,4 @@
-declare module 'ml-array-variance' {
+declare namespace arrayVariance {
   export interface ArrayVarianceOptions {
     /**
      * If true, divide by (n-1). If false, divide by n.
@@ -10,13 +10,14 @@ declare module 'ml-array-variance' {
      */
     mean?: number;
   }
-
-  /**
-   * Computes the variance of the given values.
-   */
-  function arrayVariance(
-    array: ArrayLike<number>,
-    options?: ArrayVarianceOptions,
-  ): number;
-  export = arrayVariance;
 }
+
+/**
+ * Computes the variance of the given values.
+ */
+declare function arrayVariance(
+  array: ArrayLike<number>,
+  options?: arrayVariance.ArrayVarianceOptions,
+): number;
+
+export = arrayVariance;

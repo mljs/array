@@ -1,4 +1,4 @@
-declare module 'ml-array-sequential-fill' {
+declare namespace arraySequentialFill {
   export interface ArraySequentialFillOptions {
     /**
      * First value in the array.
@@ -19,15 +19,17 @@ declare module 'ml-array-sequential-fill' {
      */
     step?: number;
   }
-
-  /**
-   * Fill an array with sequential numbers.
-   */
-  function arraySequentialFill(options?: ArraySequentialFillOptions): number[];
-  function arraySequentialFill<T extends ArrayLike<number>>(
-    array: T,
-    options?: ArraySequentialFillOptions,
-  ): T;
-
-  export = arraySequentialFill;
 }
+
+/**
+ * Fill an array with sequential numbers.
+ */
+declare function arraySequentialFill(
+  options?: arraySequentialFill.ArraySequentialFillOptions,
+): number[];
+declare function arraySequentialFill<T extends ArrayLike<number>>(
+  array: T,
+  options?: arraySequentialFill.ArraySequentialFillOptions,
+): T;
+
+export = arraySequentialFill;
