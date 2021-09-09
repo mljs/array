@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/mljs/array/compare/ml-array-standard-deviation@1.1.6...ml-array-standard-deviation@1.1.7) (2021-09-09)
+
+
+### Bug Fixes
+
+* correct TS definitions ([71e7fa8](https://github.com/mljs/array/commit/71e7fa8ace065634d047ff30e842f0426b239b4a))
+
+
+
+
+
 ## [1.1.6](https://github.com/mljs/array/compare/ml-array-standard-deviation@1.1.5...ml-array-standard-deviation@1.1.6) (2021-03-24)
 
 
