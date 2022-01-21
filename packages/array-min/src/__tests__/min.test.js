@@ -7,12 +7,12 @@ describe('array-min', () => {
   typedArray[2] = 3;
 
   it('should return the min', () => {
-    expect(min([0])).toStrictEqual(0);
-    expect(min([1])).toStrictEqual(1);
-    expect(min([1, 2])).toStrictEqual(1);
-    expect(min([1, 2, 1])).toStrictEqual(1);
-    expect(min([3, 2, 1])).toStrictEqual(1);
-    expect(min(typedArray)).toStrictEqual(1);
+    expect(min([0])).toBe(0);
+    expect(min([1])).toBe(1);
+    expect(min([1, 2])).toBe(1);
+    expect(min([1, 2, 1])).toBe(1);
+    expect(min([3, 2, 1])).toBe(1);
+    expect(min(typedArray)).toBe(1);
 
     expect(min([3, 2, 1], { fromIndex: 0, toIndex: 2 })).toBe(2);
     expect(min([3, 2, 1], { fromIndex: 0, toIndex: 3 })).toBe(1);
