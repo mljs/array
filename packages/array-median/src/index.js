@@ -1,8 +1,8 @@
-import isArray from 'is-any-array';
+import { isAnyArray } from 'is-any-array';
 import quickSelectMedian from 'median-quickselect';
 
 export default function median(input) {
-  if (!isArray(input)) {
+  if (!isAnyArray(input)) {
     throw new TypeError('input must be an array');
   }
 

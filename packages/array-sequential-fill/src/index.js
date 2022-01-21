@@ -1,4 +1,4 @@
-import isArray from 'is-any-array';
+import { isAnyArray } from 'is-any-array';
 
 /**
  * Fill an array with sequential numbers
@@ -11,12 +11,12 @@ import isArray from 'is-any-array';
  * @return {Array<number>}
  */
 export default function sequentialFill(input = [], options = {}) {
-  if (typeof input === 'object' && !isArray(input)) {
+  if (typeof input === 'object' && !isAnyArray(input)) {
     options = input;
     input = [];
   }
 
-  if (!isArray(input)) {
+  if (!isAnyArray(input)) {
     throw new TypeError('input must be an array');
   }
 

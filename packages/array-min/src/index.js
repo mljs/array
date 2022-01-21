@@ -1,7 +1,7 @@
-import isArray from 'is-any-array';
+import { isAnyArray } from 'is-any-array';
 
 export default function min(input, options = {}) {
-  if (!isArray(input)) {
+  if (!isAnyArray(input)) {
     throw new TypeError('input must be an array');
   }
 

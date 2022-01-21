@@ -1,16 +1,16 @@
-import isArray from 'is-any-array';
+import { isAnyArray } from 'is-any-array';
 import max from 'ml-array-max';
 import sum from 'ml-array-sum';
 
 export default function norm(input, options = {}) {
   const { algorithm = 'absolute', sumValue = 1, maxValue = 1 } = options;
-  if (!isArray(input)) {
+  if (!isAnyArray(input)) {
     throw new Error('input must be an array');
   }
 
   let output;
   if (options.output !== undefined) {
-    if (!isArray(options.output)) {
+    if (!isAnyArray(options.output)) {
       throw new TypeError('output option must be an array if specified');
     }
     output = options.output;

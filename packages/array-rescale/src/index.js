@@ -1,9 +1,9 @@
-import isArray from 'is-any-array';
+import { isAnyArray } from 'is-any-array';
 import max from 'ml-array-max';
 import min from 'ml-array-min';
 
 export default function rescale(input, options = {}) {
-  if (!isArray(input)) {
+  if (!isAnyArray(input)) {
     throw new TypeError('input must be an array');
   } else if (input.length === 0) {
     throw new TypeError('input must not be empty');
@@ -11,7 +11,7 @@ export default function rescale(input, options = {}) {
 
   let output;
   if (options.output !== undefined) {
-    if (!isArray(options.output)) {
+    if (!isAnyArray(options.output)) {
       throw new TypeError('output option must be an array if specified');
     }
     output = options.output;

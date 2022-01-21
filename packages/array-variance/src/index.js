@@ -1,8 +1,8 @@
-import isArray from 'is-any-array';
+import { isAnyArray } from 'is-any-array';
 import arrayMean from 'ml-array-mean';
 
 export default function variance(values, options = {}) {
-  if (!isArray(values)) {
+  if (!isAnyArray(values)) {
     throw new TypeError('input must be an array');
   }
 
