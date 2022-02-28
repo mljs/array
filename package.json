@@ -11,25 +11,26 @@
     "eslint": "eslint packages/**/*.js --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepare": "npm run bootstrap",
+    "prettier": "prettier --check src",
+    "prettier-write": "prettier --write src",
     "publish": "git pull --rebase && npm run build && npm run test-publish && lerna publish",
-    "test": "run-s build test-only eslint",
+    "test": "run-s build test-only eslint && npm run prettier",
     "test-watch": "jest --watch",
     "test-publish": "run-s test-only eslint",
-    "test-only": "jest",
-    "test-coverage": "jest --coverage"
+    "test-only": "jest --coverage"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
-    "@babel/preset-env": "^7.15.4",
-    "@rollup/plugin-babel": "^5.3.0",
-    "eslint": "^7.32.0",
-    "eslint-config-cheminfo": "^5.5.0",
-    "jest": "^27.1.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@rollup/plugin-babel": "^5.3.1",
+    "eslint": "^8.10.0",
+    "eslint-config-cheminfo": "^7.2.2",
+    "jest": "^27.5.1",
     "lerna": "^4.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.3.2",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.56.3"
+    "rollup": "^2.68.0"
   },
   "jest": {
     "testEnvironment": "node"
