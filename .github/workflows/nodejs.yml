@@ -12,5 +12,4 @@ jobs:
     uses: zakodium/workflows/.github/workflows/nodejs.yml@nodejs-v1
     with:
       node-version-matrix: '[12, 14, 16]'
-      npm-setup-command: 'npm install && npm run prepare && npm run eslint'
-      npm-test-command: 'npm install && npm run build && npm run test-only'
+      npm-setup-command: 'npm install && npm run prepare && npm run build'
