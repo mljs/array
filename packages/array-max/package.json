@@ -2,12 +2,13 @@
   "name": "ml-array-max",
   "version": "1.2.4",
   "description": "Get the maximum value in an array",
-  "main": "lib/index.js",
-  "module": "lib-es6/index.js",
-  "types": "types.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "types": "./types.d.ts",
   "files": [
     "lib",
-    "lib-es6",
     "src",
     "types.d.ts"
   ],
@@ -22,7 +23,27 @@
     "url": "https://github.com/mljs/array/issues"
   },
   "homepage": "https://github.com/mljs/array/tree/master/packages/array-max#readme",
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf coverage lib",
+    "eslint": "eslint . --cache",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepack": "npm run tsc",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "test": "npm run test-only && npm run check-types && npm run eslint && npm run prettier",
+    "test-only": "vitest run --coverage",
+    "tsc": "npm run clean && npm run tsc-build",
+    "tsc-build": "tsc --project tsconfig.build.json"
+  },
   "dependencies": {
-    "is-any-array": "^2.0.0"
+    "is-any-array": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.4",
+    "@zakodium/tsconfig": "^1.0.5",
+    "eslint-config-cheminfo-typescript": "^21.2.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
   }
 }
