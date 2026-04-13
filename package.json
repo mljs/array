@@ -18,7 +18,7 @@
     "install-clean": "rimraf node_modules packages/*/node_modules",
     "prettier": "prettier --check .",
     "prettier-write": "prettier --write .",
-    "publish": "npm run test && npm run build && npm run test && lerna publish -y --no-verify-access",
+    "publish": "npm run test && npm run build && lerna publish -y --no-verify-access",
     "test": "npm run test-only && tsc --noEmit && npm run eslint && npm run prettier",
     "test-only": "vitest --run --coverage",
     "tsc": "tsc --build",
