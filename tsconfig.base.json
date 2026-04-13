@@ -1,0 +1,10 @@
+{
+  "extends": "@zakodium/tsconfig",
+  "compilerOptions": {
+    "rootDir": "${configDir}/src",
+    "noUncheckedIndexedAccess": false,
+    "customConditions": ["ml-array-internal"],
+    "outDir": "${configDir}/lib",
+    "types": ["node"]
+  }
+}

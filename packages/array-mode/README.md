@@ -1,7 +1,7 @@
 # array-mode
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 Get the most repeated value in an array.
 
@@ -20,7 +20,7 @@ const result = mode([1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4]);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/ml-array-mode.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ml-array-mode

@@ -58,5 +58,8 @@ typings/
 .env
 
 .idea
+
+# Lib (ts) artifacts
+
 /packages/*/lib/
-/packages/*/lib-es6/
+/packages/*/*.tsbuildinfo

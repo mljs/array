@@ -1,7 +1,7 @@
 # array-rescale
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 Rescale an array into a range.
 
@@ -15,11 +15,11 @@ Rescale an array into a range.
 
 Rescales the values in the `input` so they fit between two new values.
 
-__Options:__
+**Options:**
 
-* `min`: the new minimum value (default: 0)
-* `max`: the new maximum value (default: 1)
-* `output`: an array to use for output. You can pass `input` here to get an in-place modification.
+- `min`: the new minimum value (default: 0)
+- `max`: the new maximum value (default: 1)
+- `output`: an array to use for output. You can pass `input` here to get an in-place modification.
 
 ```js
 import rescale from 'ml-array-rescale';
@@ -30,7 +30,7 @@ const result = rescale([0, 1, 2, 3, 4]);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/ml-array-rescale.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ml-array-rescale

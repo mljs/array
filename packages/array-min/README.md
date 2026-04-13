@@ -1,7 +1,7 @@
 # array-min
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 Get the minimum value in an array.
 
@@ -20,7 +20,7 @@ const result = min([1, 5, 3, 2, 4]);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/ml-array-min.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ml-array-min
