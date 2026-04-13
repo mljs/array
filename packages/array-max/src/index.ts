@@ -1,6 +1,6 @@
 import { isAnyArray } from 'is-any-array';
 
-export interface MlArrayMaxOptions {
+export interface ArrayMaxOptions {
   /**
    * Start index (inclusive) for the slice within which we look for the maximum.
    * @default 0
@@ -20,9 +20,9 @@ export interface MlArrayMaxOptions {
  * @param input
  * @param options
  */
-export default function mlArrayMax(
+export default function max(
   input: ArrayLike<number>,
-  options: MlArrayMaxOptions = {},
+  options: ArrayMaxOptions = {},
 ): number {
   if (!isAnyArray(input)) {
     throw new TypeError('input must be an array');
