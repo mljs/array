@@ -11,10 +11,10 @@ import sum from '../packages/array-sum/src';
 import variance from '../packages/array-variance/src';
 
 export {
-  min,
   max,
-  median,
   mean,
+  median,
+  min,
   mode,
   normed,
   rescale,

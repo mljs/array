@@ -1,0 +1,12 @@
+{
+  "extends": "@zakodium/tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": ".",
+    "noUncheckedIndexedAccess": false,
+    "customConditions": ["ml-array-internal"],
+    "outDir": "${configDir}/lib-internal",
+    "types": ["node"]
+  },
+  "include": ["src", "vite*.ts"]
+}

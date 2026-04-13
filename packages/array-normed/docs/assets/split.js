@@ -4,8 +4,8 @@
   typeof exports === 'object' && typeof module !== 'undefined'
     ? (module.exports = factory())
     : typeof define === 'function' && define.amd
-    ? define(factory)
-    : (global.Split = factory());
+      ? define(factory)
+      : (global.Split = factory());
 })(this, function () {
   // The programming goals of Split.js are to deliver readable, understandable and
   // maintainable code, while at the same time manually optimizing for tiny minified file size,
@@ -120,7 +120,7 @@
   let defaultGutterStyleFn = function (dim, gutSize) {
     let obj;
 
-    return (obj = {}), (obj[dim] = `${gutSize}px`), obj;
+    return ((obj = {}), (obj[dim] = `${gutSize}px`), obj);
   };
 
   // The main function to initialize a split. Split.js thinks about each pair
@@ -246,7 +246,7 @@
       let style = elementStyle(dimension, size, gutSize, i);
 
       Object.keys(style).forEach(function (prop) {
-        // eslint-disable-next-line no-param-reassign
+         
         el.style[prop] = style[prop];
       });
     }
@@ -255,7 +255,7 @@
       let style = gutterStyle(dimension, gutSize, i);
 
       Object.keys(style).forEach(function (prop) {
-        // eslint-disable-next-line no-param-reassign
+         
         gutterElement.style[prop] = style[prop];
       });
     }
@@ -620,7 +620,7 @@
         element: elementOrSelector(id),
         size: sizes[i],
         minSize: minSizes[i],
-        i: i,
+        i,
       };
 
       let pair;
@@ -631,8 +631,8 @@
           a: i - 1,
           b: i,
           dragging: false,
-          direction: direction,
-          parent: parent,
+          direction,
+          parent,
         };
 
         pair[aGutterSize] = getGutterSize(
@@ -725,7 +725,7 @@
         if (expandToMin) {
           adjustToMin(element);
         } else {
-          // eslint-disable-next-line no-param-reassign
+           
           element.minSize = computedSize;
         }
       }
@@ -777,20 +777,20 @@
 
     if (isIE8) {
       return {
-        setSizes: setSizes,
-        destroy: destroy,
+        setSizes,
+        destroy,
       };
     }
 
     return {
-      setSizes: setSizes,
-      getSizes: getSizes,
+      setSizes,
+      getSizes,
       collapse: function collapse(i) {
         adjustToMin(elements[i]);
       },
-      destroy: destroy,
-      parent: parent,
-      pairs: pairs,
+      destroy,
+      parent,
+      pairs,
     };
   };
 

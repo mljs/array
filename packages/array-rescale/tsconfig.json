@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "references": [
+    {
+      "path": "../array-max/tsconfig.json"
+    },
+    {
+      "path": "../array-min/tsconfig.json"
+    }
+  ]
+}

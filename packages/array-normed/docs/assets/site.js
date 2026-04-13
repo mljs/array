@@ -114,12 +114,12 @@ let cw_without_sb = split_left.clientWidth;
 split_left.style.overflow = '';
 
 Split(['#split-left', '#split-right'], {
-  elementStyle: function (dimension, size, gutterSize) {
+  elementStyle (dimension, size, gutterSize) {
     return {
       'flex-basis': `calc(${size}% - ${gutterSize}px)`,
     };
   },
-  gutterStyle: function (dimension, gutterSize) {
+  gutterStyle (dimension, gutterSize) {
     return {
       'flex-basis': `${gutterSize}px`,
     };

@@ -1,7 +1,7 @@
 # array-variance
 
-  [![NPM version][npm-image]][npm-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
 Get the variance in an array.
 
@@ -20,7 +20,7 @@ var dataVariance = variance(data);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/ml-array-variance.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ml-array-variance
