@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "conventionalCommits": true,
+  "changelogPreset": "conventionalcommits",
   "version": "independent",
   "packages": ["packages/*"]
 }

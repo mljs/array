@@ -28,6 +28,7 @@
     "@types/node": "^25.6.0",
     "@vitest/coverage-v8": "^4.1.4",
     "@zakodium/tsconfig": "^1.0.5",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
     "eslint": "^9.39.4",
     "eslint-config-cheminfo-typescript": "^21.2.0",
     "lerna": "^9.0.5",
