@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import sequentialFill from '..';
+import sequentialFill from '../index.ts';
 
 describe('array-sequential fill', () => {
   it('default value', () => {
@@ -9,6 +9,7 @@ describe('array-sequential fill', () => {
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
     ]);
   });
+
   it('check options', () => {
     expect(sequentialFill([], { from: 0, to: 10, step: 2 })).toStrictEqual([
       0, 2, 4, 6, 8, 10,

@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import median from '..';
+import median from '../index.ts';
 
 describe('array-median', () => {
-  let data = [];
+  const data: number[] = [];
   for (let i = 0; i < 1000; i++) {
     data.push(Math.random());
   }
@@ -16,13 +16,15 @@ describe('array-median', () => {
     expect(median([3, 2, 1])).toBe(2);
     expect(median(data)).toBeCloseTo(0.5, 1);
   });
+
   it('should return the median with typed array', () => {
-    let array = new Uint16Array(5);
+    const array = new Uint16Array(5);
     array[0] = 4;
     array[1] = 1;
     array[2] = 2;
     array[3] = 3;
     array[4] = 0;
+
     expect(median(array)).toBe(2);
   });
 

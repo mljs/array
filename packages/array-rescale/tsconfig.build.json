@@ -1,11 +1,12 @@
 {
-  "extends": "../../tsconfig.build.base.json",
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true
+  },
   "references": [
-    {
-      "path": "../array-max/tsconfig.build.json"
-    },
-    {
-      "path": "../array-min/tsconfig.build.json"
-    }
-  ]
+    { "path": "../array-max/tsconfig.json" },
+    { "path": "../array-min/tsconfig.json" }
+  ],
+  "include": ["src"],
+  "exclude": ["**/*.test.*"]
 }

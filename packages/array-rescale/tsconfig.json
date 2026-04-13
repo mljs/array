@@ -1,11 +1,10 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "compilerOptions": {
+    "composite": true
+  },
   "references": [
-    {
-      "path": "../array-max/tsconfig.json"
-    },
-    {
-      "path": "../array-min/tsconfig.json"
-    }
+    { "path": "./tsconfig.build.json" },
+    { "path": "./tsconfig.test.json" }
   ]
 }

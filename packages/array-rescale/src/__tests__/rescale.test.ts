@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import rescale from '../index';
+import rescale from '../index.ts';
 
 describe('rescale', () => {
-  let typedArray = new Uint16Array(3);
+  const typedArray = new Uint16Array(3);
   typedArray[0] = 1;
   typedArray[1] = 2;
   typedArray[2] = 3;
@@ -25,6 +25,7 @@ describe('rescale', () => {
     const array = [0, 1, 2, 3, 4];
     const output = new Array(5);
     rescale(array, { output });
+
     expect(output).toStrictEqual([0, 0.25, 0.5, 0.75, 1]);
     expect(array).toStrictEqual([0, 1, 2, 3, 4]);
   });
@@ -32,6 +33,7 @@ describe('rescale', () => {
   it('should work in-place', () => {
     const array = [0, 1, 2, 3, 4];
     rescale(array, { output: array });
+
     expect(array).toStrictEqual([0, 0.25, 0.5, 0.75, 1]);
   });
 

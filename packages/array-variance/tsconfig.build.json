@@ -1,8 +1,9 @@
 {
-  "extends": "../../tsconfig.build.base.json",
-  "references": [
-    {
-      "path": "../array-mean/tsconfig.build.json"
-    }
-  ]
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "references": [{ "path": "../array-mean/tsconfig.json" }],
+  "include": ["src"],
+  "exclude": ["**/*.test.*"]
 }

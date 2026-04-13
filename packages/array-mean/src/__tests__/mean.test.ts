@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import mean from '..';
+import mean from '../index.ts';
 
 describe('array-mean', () => {
-  let typedArray = new Uint16Array(3);
+  const typedArray = new Uint16Array(3);
   typedArray[0] = 1;
   typedArray[1] = 2;
   typedArray[2] = 3;

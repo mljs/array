@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import min from '..';
+import min from '../index.ts';
 
 describe('array-min', () => {
-  let typedArray = new Uint16Array(3);
+  const typedArray = new Uint16Array(3);
   typedArray[0] = 1;
   typedArray[1] = 2;
   typedArray[2] = 3;
@@ -25,6 +25,7 @@ describe('array-min', () => {
     expect(min(typedArray, { fromIndex: 0, toIndex: 2 })).toBe(1);
     expect(min(typedArray, { fromIndex: 0, toIndex: 3 })).toBe(1);
   });
+
   it('should throw on invalid value', () => {
     // @ts-expect-error ensure implementation catch missing input
     expect(() => min()).toThrow(/input must be an array/);

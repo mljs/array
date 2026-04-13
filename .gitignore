@@ -59,8 +59,7 @@ typings/
 
 .idea
 
-/lib/
-/lib-internal/
+# Lib (ts) artifacts
+
 /packages/*/lib/
-/packages/*/lib-es6/
-/packages/*/lib-internal/
+/packages/*/*.tsbuildinfo

@@ -1,8 +1,10 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "compilerOptions": {
+    "composite": true
+  },
   "references": [
-    {
-      "path": "../array-mean/tsconfig.json"
-    }
+    { "path": "./tsconfig.build.json" },
+    { "path": "./tsconfig.test.json" }
   ]
 }

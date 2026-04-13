@@ -1,38 +1,16 @@
 {
   "files": [],
   "references": [
-    {
-      "path": "packages/array-max/tsconfig.json"
-    },
-    {
-      "path": "packages/array-mean/tsconfig.json"
-    },
-    {
-      "path": "packages/array-median/tsconfig.json"
-    },
-    {
-      "path": "packages/array-min/tsconfig.json"
-    },
-    {
-      "path": "packages/array-mode/tsconfig.json"
-    },
-    {
-      "path": "packages/array-normed/tsconfig.json"
-    },
-    {
-      "path": "packages/array-rescale/tsconfig.json"
-    },
-    {
-      "path": "packages/array-sequential-fill/tsconfig.json"
-    },
-    {
-      "path": "packages/array-standard-deviation/tsconfig.json"
-    },
-    {
-      "path": "packages/array-sum/tsconfig.json"
-    },
-    {
-      "path": "packages/array-variance/tsconfig.json"
-    }
+    { "path": "packages/array-max/tsconfig.json" },
+    { "path": "packages/array-mean/tsconfig.json" },
+    { "path": "packages/array-median/tsconfig.json" },
+    { "path": "packages/array-min/tsconfig.json" },
+    { "path": "packages/array-mode/tsconfig.json" },
+    { "path": "packages/array-normed/tsconfig.json" },
+    { "path": "packages/array-rescale/tsconfig.json" },
+    { "path": "packages/array-sequential-fill/tsconfig.json" },
+    { "path": "packages/array-standard-deviation/tsconfig.json" },
+    { "path": "packages/array-sum/tsconfig.json" },
+    { "path": "packages/array-variance/tsconfig.json" }
   ]
 }

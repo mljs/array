@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import norm from '..';
+import norm from '../index.ts';
 
 describe('array-norm', () => {
   it('should return the norm', () => {
