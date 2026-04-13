@@ -14,11 +14,20 @@ export default defineConfig(
     '**/lib-internal',
     '**/docs',
     '**/CHANGELOG.md',
+    '/src/',
   ]),
   ts,
   unicorn,
   vitest,
   createNoExtraneousConfigs(),
+  {
+    // it uses an old `median-quickselect` package, which does not have types,
+    // so triple-slash-reference is used to declare `median-quickselect` module.
+    files: ['packages/array-median/src/index.ts'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
+    },
+  },
 );
 
 function createNoExtraneousConfigs() {

@@ -8,8 +8,8 @@ export default defineConfig({
   },
   test: {
     coverage: {
-      include: ['packages/*/src/**/*.ts'],
-      exclude: ['packages/*/lib/**', 'packages/*/docs/**', 'src/**'],
+      include: ['**/src'],
+      exclude: ['**/lib', '**/docs', '/src'],
     },
   },
 });

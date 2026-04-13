@@ -14,21 +14,21 @@ export default function mode(input: ArrayLike<number>): number {
   let maxValue = 0;
   let maxCount = 0;
   let count = 0;
-  let counts: Record<number, number> = {};
+  const counts: Record<number, number> = {};
 
-  for (let i = 0; i < input.length; ++i) {
-    let element = input[i];
+  for (const element of input) {
     count = counts[element];
     if (count) {
       counts[element]++;
       count++;
     } else {
-      counts[element] = count = 1;
+      count = 1;
+      counts[element] = count;
     }
 
     if (count > maxCount) {
       maxCount = count;
-      maxValue = input[i];
+      maxValue = element;
     }
   }
 

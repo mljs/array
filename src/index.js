@@ -1,25 +1,11 @@
-import max from '../packages/array-max/src';
-import mean from '../packages/array-mean/src';
-import median from '../packages/array-median/src';
-import min from '../packages/array-min/src';
-import mode from '../packages/array-mode/src';
-import normed from '../packages/array-normed';
-import rescale from '../packages/array-rescale/src';
-import sequentialFill from '../packages/array-sequential-fill/src';
-import sd from '../packages/array-standard-deviation/src';
-import sum from '../packages/array-sum/src';
-import variance from '../packages/array-variance/src';
-
-export {
-  max,
-  mean,
-  median,
-  min,
-  mode,
-  normed,
-  rescale,
-  sd,
-  sequentialFill,
-  sum,
-  variance,
-};
+export { default as max } from '../packages/array-max/src';
+export { default as mean } from '../packages/array-mean/src';
+export { default as median } from '../packages/array-median/src';
+export { default as min } from '../packages/array-min/src';
+export { default as mode } from '../packages/array-mode/src';
+export { default as normed } from '../packages/array-normed';
+export { default as rescale } from '../packages/array-rescale/src';
+export { default as sequentialFill } from '../packages/array-sequential-fill/src';
+export { default as sd } from '../packages/array-standard-deviation/src';
+export { default as sum } from '../packages/array-sum/src';
+export { default as variance } from '../packages/array-variance/src';

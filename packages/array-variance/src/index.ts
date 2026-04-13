@@ -24,8 +24,8 @@ export default function variance(
   const { unbiased = true, mean = arrayMean(values) } = options;
   let sqrError = 0;
 
-  for (let i = 0; i < values.length; i++) {
-    let x = values[i] - mean;
+  for (const value of values) {
+    const x = value - mean;
     sqrError += x * x;
   }
 

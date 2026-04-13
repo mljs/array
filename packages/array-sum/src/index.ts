@@ -13,8 +13,8 @@ export default function sum(input: ArrayLike<number>) {
   }
 
   let sumValue = 0;
-  for (let i = 0; i < input.length; i++) {
-    sumValue += input[i];
+  for (const value of input) {
+    sumValue += value;
   }
   return sumValue;
 }

@@ -1,3 +1,4 @@
+import type { AnyArray } from 'is-any-array';
 import { isAnyArray } from 'is-any-array';
 import max from 'ml-array-max';
 import sum from 'ml-array-sum';
@@ -51,7 +52,7 @@ export default function norm<T extends ArrayLike<number>>(
 
   switch (algorithm.toLowerCase()) {
     case 'absolute': {
-      let absoluteSumValue = absoluteSum(input) / sumValue;
+      const absoluteSumValue = absoluteSum(input) / sumValue;
       if (absoluteSumValue === 0) return input.slice(0) as unknown as T;
       for (let i = 0; i < input.length; i++) {
         // @ts-expect-error In this context, T should not be readonly so it's OK.
@@ -60,7 +61,7 @@ export default function norm<T extends ArrayLike<number>>(
       return output;
     }
     case 'max': {
-      let currentMaxValue = max(input);
+      const currentMaxValue = max(input);
       if (currentMaxValue === 0) return input.slice(0) as unknown as T;
       const factor = maxValue / currentMaxValue;
       for (let i = 0; i < input.length; i++) {
@@ -70,7 +71,7 @@ export default function norm<T extends ArrayLike<number>>(
       return output;
     }
     case 'sum': {
-      let sumFactor = sum(input) / sumValue;
+      const sumFactor = sum(input) / sumValue;
       if (sumFactor === 0) return input.slice(0) as unknown as T;
       for (let i = 0; i < input.length; i++) {
         // @ts-expect-error In this context, T should not be readonly so it's OK.
@@ -83,10 +84,12 @@ export default function norm<T extends ArrayLike<number>>(
   }
 }
 
-function absoluteSum(input: ArrayLike<number>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type NumberArray = Exclude<AnyArray, any[]> | number[];
+function absoluteSum(input: NumberArray) {
   let sumValue = 0;
-  for (let i = 0; i < input.length; i++) {
-    sumValue += Math.abs(input[i]);
+  for (const value of input) {
+    sumValue += Math.abs(value);
   }
   return sumValue;
 }

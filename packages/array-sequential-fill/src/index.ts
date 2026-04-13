@@ -51,7 +51,8 @@ function sequentialFill<T extends ArrayLike<number>>(
     throw new TypeError('input must be an array');
   }
 
-  let { from = 0, to = 10, size = input.length, step } = options;
+  let { from = 0, size = input.length, step } = options;
+  const { to = 10 } = options;
 
   if (size !== 0 && step) {
     throw new Error('step is defined by the array size');

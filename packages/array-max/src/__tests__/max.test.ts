@@ -21,6 +21,7 @@ describe('array-max', () => {
     expect(max(typedArray, { fromIndex: 0, toIndex: 2 })).toBe(2);
     expect(max(typedArray, { fromIndex: 0, toIndex: 3 })).toBe(3);
   });
+
   it('should throw on invalid value', () => {
     // @ts-expect-error ensure implementation catch missing input
     expect(() => max()).toThrow(/input must be an array/);
