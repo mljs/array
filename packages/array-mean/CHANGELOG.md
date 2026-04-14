@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/mljs/array/compare/ml-array-mean@1.1.6...ml-array-mean@2.0.0) (2026-04-14)
+
+### ⚠ BREAKING CHANGES
+
+* migrate to TypeScript and ESM-only (#21)
+
+### Code Refactoring
+
+* migrate to TypeScript and ESM-only ([#21](https://github.com/mljs/array/issues/21))
+
+
 ## [1.1.6](https://github.com/mljs/array/compare/ml-array-mean@1.1.5...ml-array-mean@1.1.6) (2022-01-21)
 
 **Note:** Version bump only for package ml-array-mean

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/mljs/array/compare/ml-array-rescale@1.3.7...ml-array-rescale@2.0.0) (2026-04-14)
+
+### ⚠ BREAKING CHANGES
+
+* migrate to TypeScript and ESM-only (#21)
+
+### Code Refactoring
+
+* migrate to TypeScript and ESM-only ([#21](https://github.com/mljs/array/issues/21))
+
+
 ## [1.3.7](https://github.com/mljs/array/compare/ml-array-rescale@1.3.6...ml-array-rescale@1.3.7) (2022-01-21)
 
 **Note:** Version bump only for package ml-array-rescale
