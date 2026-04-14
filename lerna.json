@@ -1,11 +1,7 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "conventionalCommits": true,
-  "packages": ["packages/*"],
-  "command": {
-    "bootstrap": {
-      "npmClientArgs": ["--no-package-lock"]
-    }
-  },
-  "version": "independent"
+  "changelogPreset": "conventionalcommits",
+  "version": "independent",
+  "packages": ["packages/*"]
 }
